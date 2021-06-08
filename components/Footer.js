@@ -22,12 +22,12 @@ const Footer = (props) => {
         <a href={'#'}>Reviews</a>
         <a href={'#'}>Gallery</a>
       </div>
-      <div className={styles.guideance}>
+      <div className={styles.aboutUs}>
         <h3>ABOUT US</h3>
         <a href={'#'}>About Us</a>
         <a href={'#'}>Contact</a>
       </div>
-      <div className={styles.guideance}>
+      <div className={styles.points}>
         <h3>POINTS</h3>
         <a href={'https://www.google.com/travel/hotels/silvanus/entity/CgsIy725ho7MnLGCARAB/reviews?ap=entity&hrf=CgUIpgQQACIDVFJZKhYKBwjjDxAHGBwSBwjjDxAHGB0YASgAsAEAaAGaARASDkhvdGVsIFNpbHZhbnVzogEdCgsvZy8xdGY1eW0yNRIOSG90ZWwgU2lsdmFudXOSAQIgAQ&tcfs=EjcKCy9nLzF0ZjV5bTI1Eg5Ib3RlbCBTaWx2YW51cxoYCgoyMDE5LTA3LTI4EgoyMDE5LTA3LTI5UgA&rp=OAI&ved=0CJMBEKjgAigAahcKEwioi8aPusTjAhUAAAAAHQAAAAAQAQ'}>Google</a>
         <a href={'https://www.tatilsepeti.com/hotel-silvanus'}>Tatil Sepeti</a>

@@ -1,10 +1,14 @@
-import Head from 'next/head'
-import Image from 'next/image'
+
 import styles from '../styles/Home.module.css'
 import Header from "../components/Header";
 import {Fragment, useRef} from "react";
 import Footer from "../components/Footer";
-import Rooms from "../components/Rooms";
+import Rooms from "../componentSamples/Rooms";
+import HeaderSample from "../componentSamples/HeaderSample";
+import About from "../componentSamples/About";
+import Features from "../componentSamples/Features";
+import Stories from "../componentSamples/Stories";
+import Booking from "../componentSamples/Booking";
 
 export default function Home() {
 
@@ -31,11 +35,17 @@ export default function Home() {
         <section ref={blogSectionRef} className={styles['section-three']}>
           <h1>Blog</h1>
         </section>
-        <Rooms/>
+
         <section ref={contentSectionRef} className={styles['section-four']}>
           <h1>Content</h1>
         </section>
       </div>
+      <HeaderSample/>
+      <About/>
+      <Features/>
+      <Rooms/>
+      <Stories/>
+      <Booking/>
       <Footer/>
     </Fragment>
   )

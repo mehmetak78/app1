@@ -1,12 +1,11 @@
 import React from 'react';
 
-
 const Rooms = (props) => {
   return (
     <section className="section-tours" id="section-tours">
       <div className="u-center-text u-margin-bottom-big">
         <h2 className="heading-secondary">
-          Most popular tours
+          Most popular rooms
         </h2>
       </div>
 

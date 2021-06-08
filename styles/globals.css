@@ -8,8 +8,8 @@
 }
 
 body {
-  font-family: 'Work Sans', sans-serif;;
-  font-weight: 400;
-  background: #0a2e4f;
-  color: #fff;
+  --font-family: 'Work Sans', sans-serif;;
+  --font-weight: 400;
+  ___background: #0a2e4f;
+  __color: #fff;
 }
