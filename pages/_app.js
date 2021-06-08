@@ -1,4 +1,6 @@
-import '../styles/globals.css'
+import '../styles/globals.css';
+import '../styles/Rooms.scss';
+
 import {Fragment} from "react";
 import Header from "../components/Header";
 

@@ -3,7 +3,7 @@
 .footer {
   display: flex;
   padding: 2rem;
-  color: white;
+  color: #f7f7f7;
   justify-content: space-around;
   background-color: $background-color-footer;
 
@@ -20,7 +20,21 @@
       padding: 0.4rem 0;
       text-decoration: none;
       font-size: 0.8rem;
-      color: #cccccc;
+      color: #f7f7f7;
+      &:link,
+      &:visited {
+        color: #f7f7f7;
+        background-color: #333;;
+        text-decoration: none;
+        display: inline-block;
+        transition: all .5s;
+      }
+      &:hover,
+      &:active {
+        color: white;
+        box-shadow: 0 1rem 2rem rgba(black, .4);
+        transform: rotate(5deg) scale(1.3);
+      }
     }
   }
 
