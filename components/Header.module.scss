@@ -1,0 +1,183 @@
+@import '../styles/globalVars.scss';
+
+.header {
+  background-color: rgba($background-color,.91);
+  text-align: center;
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  padding: 1rem 0;
+  font-weight: 700;
+  .logo {
+    font-family: 'Parisienne', cursive;
+    font-size: 2.2em;
+  }
+  nav {
+    position: absolute;
+    text-align: center;
+    top: 100%;
+    left: 0;
+    background: rgba($background-color,.45);
+    transform: scale(1, 0);
+    transform-origin: top;
+    transition: transform 400ms ease-in-out;
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    li {
+      overflow: hidden;
+      &:hover {
+        padding: 0;
+        color: $secondary-color;
+        background: rgba($background-color,0.25);
+      }
+    }
+    a {
+      display: block;
+      padding: 1em;
+      color: $primary-color;
+      text-decoration: none;
+      font-size: 1.2rem;
+      text-transform: uppercase;
+    }
+    button {
+
+    }
+  }
+}
+
+.content {
+  height: 100vh;
+  background-image: url(https://www.silvanusotel.com/images/SE572019233654829.jpg);
+  background-color: rgba($background-color,.15);
+  background-blend-mode: multiply;
+  background-size: cover;
+  background-position: center;
+  display: grid;
+  place-items: center;
+}
+
+
+
+.nav-toggle {
+  display: none;
+  &:checked ~ nav {
+    transform: scale(1, 1);
+  }
+  &:checked ~ .nav-toggle-label
+  {
+    span::after {
+      transform: translateY(3px) skewY(5deg);
+    }
+  }
+}
+
+.nav-toggle-label {
+  position: absolute;
+  top:0;
+  left:0;
+  margin-left: 1rem;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  &:hover {
+    cursor: pointer;
+  }
+  span, span::before, span::after {
+    display: block;
+    background: white;
+    height: 3px;
+    width: 2em;
+    border-radius: 2px;
+    position: relative;
+  }
+  span {
+    &::before, &::after {
+      position: absolute;
+      content: '';
+    }
+    &::before {
+      bottom: 7px;
+    }
+    &::after {
+      transition: transform 400ms ease-in-out;
+      top: 7px;
+    }
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .nav-toggle-label {
+    display: none;
+  }
+
+  .header {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 1fr auto minmax(600px, 3fr) 1fr;
+    .logo {
+      grid-column: 1 / 2;
+    }
+
+    nav {
+      // all: unset; /* this causes issues with Edge, since it's unsupported */
+
+      /* the following lines are not from my video, but add Edge support */
+      position: relative;
+      text-align: left;
+      transition: none;
+      transform: scale(1,1);
+      background: none;
+      top: initial;
+      left: initial;
+      width: 100%;
+      /* end Edge support stuff */
+
+      grid-column: 3 / 4;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+
+      ul {
+        display: flex;
+      }
+
+      li {
+        margin-left: 3em;
+        margin-bottom: 0;
+      }
+
+      li:hover {
+        background: none;
+        a {
+          box-shadow: none;
+        }
+        a::before {
+          transform: scale(1, 1);
+        }
+      }
+
+      a {
+        position: relative;
+
+        &::before {
+          content: '';
+          display: block;
+          height: 3px;
+          background: $secondary-color;
+          position: absolute;
+          bottom: 0.5em;
+          left: 0;
+          right: 0;
+          transform: scale(0, 1);
+          transition: transform ease-in-out 300ms;
+        }
+      }
+    }
+  }
+
+
+}
