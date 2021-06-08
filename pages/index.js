@@ -3,6 +3,7 @@ import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import Header from "../components/Header";
 import {Fragment, useRef} from "react";
+import Footer from "../components/Footer";
 
 export default function Home() {
 
@@ -29,10 +30,11 @@ export default function Home() {
                 <section ref={blogSectionRef} className={styles['section-three']}>
                     <h1>Blog</h1>
                 </section>
-                <section ref={contentSectionRef} className={styles['section-three']}>
+                <section ref={contentSectionRef} className={styles['section-four']}>
                     <h1>Content</h1>
                 </section>
             </div>
+            <Footer/>
         </Fragment>
     )
 }

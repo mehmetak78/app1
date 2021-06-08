@@ -1,6 +1,6 @@
 
 .section {
-    color: #FFFFFB;
+    color: white;
     text-align: center;
     font-size: 1.2rem;
     font-weight: bold;
@@ -8,7 +8,8 @@
 
 .section-two {
     padding: 30vh 0;
-    background: #FF6B6C;
+    background: #00ffff;
+
     position: relative;
     __z-index: 10;
     clip-path: polygon(0 0, 100% 0, 100% calc(100% - 10vw), 0 100%);
@@ -21,5 +22,11 @@
 
 .section-three {
     padding: 30vh 0;
-    background: #5B5F97;
+    background: #AFEEEE;
+}
+
+.section-four {
+    padding: 30vh 0;
+
+    background: #48D1CC;;
 }

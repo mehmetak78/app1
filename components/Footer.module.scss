@@ -1,0 +1,34 @@
+@import '../styles/globalVars.scss';
+
+.footer {
+  display: flex;
+  padding: 2rem;
+  color: white;
+  justify-content: space-around;
+  background-color: $background-color-footer;
+
+  .logo, .address, .guideance, .aboutUs {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    h3 {
+      padding-bottom: 1rem;
+    }
+
+    a {
+      padding: 0.4rem 0;
+      text-decoration: none;
+      font-size: 0.8rem;
+      color: #cccccc;
+    }
+  }
+
+  .aboutUs {
+
+  }
+
+  .points {
+
+  }
+}
