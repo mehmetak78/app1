@@ -6,11 +6,11 @@
   position: fixed;
   z-index: 1;
   width: 100%;
-  padding: 1rem 0;
+  padding: 0.2rem 0;
   font-weight: 700;
   .logo {
     font-family: 'Parisienne', cursive;
-    font-size: 2.2em;
+    font-size: 2em;
   }
   nav {
     position: absolute;
@@ -42,16 +42,14 @@
       font-size: 1.2rem;
       text-transform: uppercase;
     }
-    button {
-
-    }
   }
 }
 
 .content {
   height: 100vh;
-  background-image: url(https://www.silvanusotel.com/images/SE572019233654829.jpg);
-  background-color: rgba($background-color,.15);
+  //background-image: url(https://www.silvanusotel.com/images/SE572019233654829.jpg);
+  background-image: url(https://www.silvanusotel.com/images/SE572019233324151.jpg);
+  background-color: rgba($background-image-filter-color,.05);
   background-blend-mode: multiply;
   background-size: cover;
   background-position: center;
