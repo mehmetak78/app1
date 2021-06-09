@@ -1,16 +1,26 @@
 @import '../styles/globalVars.scss';
 
+.headerScrolled {
+  background-color: rgba($background-color,0.81);
+  font-size: 2em;
+}
+
+.headerNotScrolled {
+  background-color: rgba($background-color,0);
+  height: 2rem;
+  font-size: 2em;
+}
+
+
 .header {
-  background-color: rgba($background-color,.81);
   text-align: center;
   position: fixed;
-  z-index: 1;
+  z-index: 999;
   width: 100%;
   padding: 0.2rem 0;
   font-weight: 500;
   .logo {
     font-family: 'Parisienne', cursive;
-    font-size: 3em;
     color: white;
   }
   nav {
@@ -40,7 +50,8 @@
       padding: 0.8em;
       color: $primary-color;
       text-decoration: none;
-      font-size: 1.5rem;
+      //font-size: 1.5rem;
+
     }
   }
 }

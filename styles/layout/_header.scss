@@ -15,11 +15,12 @@
     height: 85vh;
     background-image: linear-gradient(
                     to right bottom,
-                    rgba($color-primary-light, 0.8),
-                    rgba($color-primary-dark, 0.8)),
-    url(../../public/img/hero-small.jpg);
+                    rgba($color-primary-light, 0.2),
+                    rgba($color-primary-dark, 0.5)),
+    //url(../../public/img/hero-small.jpg);
+    url(https://www.silvanusotel.com/images/SE572019233324151.jpg);
     background-size: cover;
-    background-position: top;
+    background-position: center;
     position: relative;
 
 
