@@ -1,17 +1,14 @@
 import '../styles/globals.css';
 import '../styles/main.scss';
 
-import {Fragment} from "react";
-import Header from "../components/Header";
+import Layout from "../components/Layout";
 
 function MyApp({Component, pageProps}) {
-    return (
-        <Fragment>
-
-            <Component {...pageProps} />
-
-        </Fragment>
-    )
+  return (
+    <Layout>
+      <Component {...pageProps} />
+    </Layout>
+  )
 }
 
 export default MyApp

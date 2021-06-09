@@ -2,29 +2,7 @@ import React, {Fragment, useEffect, useRef, useState} from 'react';
 import styles from './Header.module.scss';
 
 const Header = (props) => {
-
-    const [y, setY] = useState(0);
-
-    const handleNavigation = (e) => {
-        const window = e.currentTarget;
-        if (y > window.scrollY) {
-            console.log("scrolling up");
-        } else if (y < window.scrollY) {
-            console.log("scrolling down");
-        }
-        setY(window.scrollY);
-        console.log(window.scrollY)
-    };
-
-    useEffect(() => {
-        setY(window.scrollY);
-
-        window.addEventListener("scroll", (e) => handleNavigation(e));
-    }, []);
-
-
-
-    const headerClass = y===0
+    const headerClass = props.isScrolled
         ? `${styles.header} ${styles.headerNotScrolled}`
         : `${styles.header} ${styles.headerScrolled}`;
 
@@ -36,7 +14,7 @@ const Header = (props) => {
                 </div>
                 <input type="checkbox" id="nav-toggle" className={styles['nav-toggle']}/>
                 <label htmlFor="nav-toggle" className={styles["nav-toggle-label"]}>
-                    <span></span>
+                    <span> </span>
                 </label>
                 <nav>
                     <ul>

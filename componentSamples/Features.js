@@ -3,7 +3,6 @@ import React from 'react';
 const Features = (props) => {
   return (
     <section className="section-features">
-
       <div className="row">
         <div className="col-1-of-4">
           <div className="feature-box">

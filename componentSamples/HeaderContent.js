@@ -2,7 +2,6 @@ import React from 'react';
 
 const HeaderContent = (props) => {
   return (
-
     <header className="header">
       <div className="header__text-box">
         <h1 className="heading-primary">
@@ -11,6 +10,7 @@ const HeaderContent = (props) => {
         </h1>
         <a href="#section-tours" className="btn btn--white btn--animated">Discover Our Tours</a>
       </div>
+
     </header>
 
   );
