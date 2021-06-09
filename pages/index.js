@@ -3,7 +3,7 @@ import Header from "../components/Header";
 import {Fragment, useRef} from "react";
 import Footer from "../components/Footer";
 import Rooms from "../componentSamples/Rooms";
-import HeaderSample from "../componentSamples/HeaderSample";
+import HeaderContent from "../componentSamples/HeaderContent";
 import About from "../componentSamples/About";
 import Features from "../componentSamples/Features";
 import Stories from "../componentSamples/Stories";
@@ -16,19 +16,22 @@ export default function Home() {
     const blogSectionRef = useRef();
     const contentSectionRef = useRef();
 
+    const handleSectionClick = (e) => {
+        e.preventDefault();
+        switch(e.target.id) {
+            case 'home' : homeSectionRef.current.scrollIntoView({behavior: 'smooth'}); break;
+            case 'about' : aboutSectionRef.current.scrollIntoView({behavior: 'smooth'}); break;
+            case 'blog' : blogSectionRef.current.scrollIntoView({behavior: 'smooth'}); break;
+            case 'content' : contentSectionRef.current.scrollIntoView({behavior: 'smooth'}); break;
+        }
+    }
+
     return (
         <Fragment>
-
             <div ref={homeSectionRef}>
-                <Header
-                    homeSectionRef={homeSectionRef}
-                    aboutSectionRef={aboutSectionRef}
-                    blogSectionRef={blogSectionRef}
-                    contentSectionRef={contentSectionRef}
-                />
+                <Header handleSectionClick = {handleSectionClick}/>
             </div>
-            <HeaderSample/>
-
+            <HeaderContent handleSectionClick = {handleSectionClick}/>
             <About/>
             <Features/>
             <Rooms/>
