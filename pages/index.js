@@ -11,18 +11,35 @@ import HeaderContent from "../components/sections/HeaderContent";
 
 const Home = (props) => {
 
-    const {aboutSectionRef, blogSectionRef, footerSectionRef} = props;
+    const {
+        aboutSectionRef,
+        featuresSectionRef,
+        roomsSectionRef,
+        storiesSectionRef,
+        bookingSectionRef,
+        blogSectionRef,
+        footerSectionRef} = props;
 
     return (
         <Fragment>
             <HeaderContent/>
-            <About/>
-            <Features/>
-            <Rooms/>
-            <Stories/>
-            <Booking/>
+            <section ref={aboutSectionRef}>
+                <About/>
+            </section>
+            <section ref={featuresSectionRef}>
+                <Features/>
+            </section>
+            <section ref={roomsSectionRef}>
+                <Rooms/>
+            </section>
+            <section ref={storiesSectionRef}>
+                <Stories/>
+            </section>
+            <section ref={bookingSectionRef}>
+                <Booking/>
+            </section>
             <div className={styles.section}>
-                <section ref={aboutSectionRef} className={styles['section-two']}>
+                <section className={styles['section-two']}>
                     <h1>About</h1>
                     <img className={styles.image} src="https://unsplash.it/300/500" alt=""/>
                 </section>

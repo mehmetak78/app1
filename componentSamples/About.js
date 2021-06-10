@@ -5,7 +5,7 @@ const About = (props) => {
     <section className="section-about">
       <div className="u-center-text u-margin-bottom-big">
         <h2 className="heading-secondary">
-          Exciting tours for adenturous people
+          About Us
         </h2>
       </div>
       <div className="row">

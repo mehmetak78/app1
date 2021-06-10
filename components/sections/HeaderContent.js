@@ -4,11 +4,9 @@ import styles from './HeaderContent.module.scss';
 const HeaderContent = (props) => {
     return (
         <Fragment>
-            <header className={styles.header}>
-                <a href="#section-tours" className="btn btn--white btn--animated">Discover Our Tours</a>
-            </header>
+            <header className={styles.header} />
             <div className={styles.textBox}>
-                <span>Enjoy Your Dreams...</span>
+                <span>Enjoy Your Dream Holiday...</span>
             </div>
         </Fragment>
     );
