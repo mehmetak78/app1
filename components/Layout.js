@@ -8,7 +8,7 @@ const Layout = (props) => {
   const homeSectionRef = useRef();
   const aboutSectionRef = useRef();
   const blogSectionRef = useRef();
-  const contentSectionRef = useRef();
+  const footerSectionRef = useRef();
 
   const [y, setY] = useState(0);
 
@@ -42,7 +42,7 @@ const Layout = (props) => {
         blogSectionRef.current.scrollIntoView({behavior: 'smooth'});
         break;
       case 'content' :
-        contentSectionRef.current.scrollIntoView({behavior: 'smooth'});
+        footerSectionRef.current.scrollIntoView({behavior: 'smooth'});
         break;
     }
   }
@@ -59,7 +59,7 @@ const Layout = (props) => {
         homeSectionRef={homeSectionRef}
         aboutSectionRef={aboutSectionRef}
         blogSectionRef={blogSectionRef}
-        contentSectionRef={contentSectionRef}
+        footerSectionRef={footerSectionRef}
 
       />
     </div>

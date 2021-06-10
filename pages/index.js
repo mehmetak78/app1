@@ -8,9 +8,9 @@ import Features from "../componentSamples/Features";
 import Stories from "../componentSamples/Stories";
 import Booking from "../componentSamples/Booking";
 
-const Home = (props)=> {
+const Home = (props) => {
 
-  const {aboutSectionRef, blogSectionRef, contentSectionRef}= props;
+    const {aboutSectionRef, blogSectionRef, footerSectionRef} = props;
 
     return (
         <Fragment>
@@ -28,12 +28,14 @@ const Home = (props)=> {
                 <section ref={blogSectionRef} className={styles['section-three']}>
                     <h1>Blog</h1>
                 </section>
-                <section ref={contentSectionRef} className={styles['section-four']}>
+                <section className={styles['section-four']}>
                     <h1>Content</h1>
                 </section>
             </div>
 
-            <Footer/>
+            <section ref={footerSectionRef}>
+                <Footer/>
+            </section>
         </Fragment>
     )
 }

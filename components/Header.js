@@ -21,7 +21,7 @@ const Header = (props) => {
                         <li><a id='home' onClick={props.handleSectionClick} href="#">Home</a></li>
                         <li><a id='about' onClick={props.handleSectionClick} href="#">About</a></li>
                         <li><a id='blog' onClick={props.handleSectionClick} href="#">Blog</a></li>
-                        <li><a id='content' onClick={props.handleSectionClick} href="#">Content</a></li>
+                        <li><a id='content' onClick={props.handleSectionClick} href="#">Contacts</a></li>
                     </ul>
                 </nav>
             </header>

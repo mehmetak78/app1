@@ -34,11 +34,17 @@
         display: inline-block;
         transition: all .5s;
       }
-      &:hover,
-      &:active {
+      &:nth-child(odd):hover,
+      &:nth-child(odd):active {
         color: red;
         box-shadow: 0 1rem 2rem rgba($background-color-footer, .9);
         transform: rotate(5deg) scale(1.3);
+      }
+      &:nth-child(even):hover,
+      &:nth-child(even):active {
+        color: red;
+        box-shadow: 0 1rem 2rem rgba($background-color-footer, .9);
+        transform: rotate(-5deg) scale(1.3);
       }
     }
   }
