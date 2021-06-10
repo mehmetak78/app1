@@ -52,7 +52,7 @@
       padding: 0.8em;
       color: inherit;
       text-decoration: none;
-      //font-size: 1.5rem;
+      font-size: 2rem;
 
     }
   }
@@ -130,8 +130,9 @@
     display: grid;
     justify-content: center;
     align-items: center;
-    grid-template-columns: 1fr auto minmax(600px, 3fr) 1fr;
+    grid-template-columns: 1fr auto minmax(600px, 9fr) 1fr;
     .logo {
+      padding-left: 2rem;
       grid-column: 1 / 2;
     }
 
@@ -159,7 +160,7 @@
       }
 
       li {
-        margin-left: 3em;
+        margin-left: 1em;
         margin-bottom: 0;
       }
 
