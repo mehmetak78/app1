@@ -60,7 +60,6 @@ const Layout = (props) => {
         aboutSectionRef={aboutSectionRef}
         blogSectionRef={blogSectionRef}
         footerSectionRef={footerSectionRef}
-
       />
     </div>
   );

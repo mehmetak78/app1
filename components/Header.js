@@ -25,9 +25,6 @@ const Header = (props) => {
                     </ul>
                 </nav>
             </header>
-{/*            <div className={styles.content}>
-                <h2>SAMPLE</h2>
-            </div>*/}
         </Fragment>
     );
 };

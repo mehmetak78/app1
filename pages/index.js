@@ -2,11 +2,12 @@ import styles from '../styles/Home.module.css'
 import {Fragment} from "react";
 import Footer from "../components/Footer";
 import Rooms from "../componentSamples/Rooms";
-import HeaderContent from "../componentSamples/HeaderContent";
+
 import About from "../componentSamples/About";
 import Features from "../componentSamples/Features";
 import Stories from "../componentSamples/Stories";
 import Booking from "../componentSamples/Booking";
+import HeaderContent from "../components/sections/HeaderContent";
 
 const Home = (props) => {
 
