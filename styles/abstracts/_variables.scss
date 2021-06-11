@@ -1,5 +1,5 @@
 // COLORS
-$color-primary: #55c57a;
+$color-primary: darkblue;
 $color-primary-light: #7ed56f;
 $color-primary-dark: #28b485;
 
@@ -23,11 +23,19 @@ $color-background-primary: #65e6c3;
 $color-header-text: #4000ff;
 $color-header-text-active: #ff0000;
 
+/**************** Variables ****************/
+
+$background-color: #cccccc;
+$background-image-filter-color: #00ffff;
+
+$secondary-color: #9A8487;
+$background-color-footer: #333333;
 
 // FONT
 $default-font-size: 1.6rem;
 $header-bottom-font-family: 'Dancing Script', cursive;
 $header-bottom-font-size: 2.5rem;
+$font-family: 'Work Sans', sans-serif;
 
 // GRID
 $grid-width: 114rem;
