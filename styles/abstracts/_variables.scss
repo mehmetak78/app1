@@ -1,5 +1,30 @@
+
+$color-primary: black;
+$color-header-links: darkblue;
+$color-header-links-hover: #00ffff;
+$color-primary-text: darkgray;
+
+$color-header-background: #63A7FB;
+$color-header-background-hover: #F3F7FB;
+
+$color-background-about-section: #65e6c3;
+$color-background-about-button: #65c6a3;
+$color-about-button: darkblue;
+
+
+
+// FONT
+$default-font-size: 1.6rem;
+$header-bottom-font-family: 'Dancing Script', cursive;
+$header-bottom-font-size: 2.5rem;
+$font-family: 'Work Sans', sans-serif;
+
+
+
+
+
 // COLORS
-$color-primary: darkblue;
+
 $color-primary-light: #7ed56f;
 $color-primary-dark: #28b485;
 
@@ -23,19 +48,12 @@ $color-background-primary: #65e6c3;
 $color-header-text: #4000ff;
 $color-header-text-active: #ff0000;
 
-/**************** Variables ****************/
 
-$background-color: #cccccc;
-$background-image-filter-color: #00ffff;
+$color-background-image-filter: #00ffff;
+$color-background-footer: #333333;
 
-$secondary-color: #9A8487;
-$background-color-footer: #333333;
 
-// FONT
-$default-font-size: 1.6rem;
-$header-bottom-font-family: 'Dancing Script', cursive;
-$header-bottom-font-size: 2.5rem;
-$font-family: 'Work Sans', sans-serif;
+
 
 // GRID
 $grid-width: 114rem;

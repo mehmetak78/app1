@@ -12,7 +12,7 @@
 */
 
 .header {
-    height: 100vh;
+    height: 10vh;
     background-image: linear-gradient(
                     to right bottom,
                     rgba($color-primary-light, 0.2),
@@ -35,8 +35,8 @@
     only screen and (min-width: 125em) {
         background-image: linear-gradient(
                         to right bottom,
-                        rgba($color-primary-light, 0.8),
-                        rgba($color-primary-dark, 0.8)),
+                        rgba($color-primary-light, 0.2),
+                        rgba($color-primary-dark, 0.5)),
         url(../../public/img/hero.jpg);
     }
 

@@ -1,17 +1,16 @@
-
 @import '../styles/abstracts/variables';
 @import '../styles/abstracts/mixins';
 
 .headerScrolled {
-  background-color: rgba($background-color,0.81);
-  //color: $secondary-color;
+  background-color: rgba($color-header-background, 0.81);
+
   .logo {
     display: block;
   }
 }
+
 .headerNotScrolled {
-  //color: $primary-color;
-  background-color: rgba($background-color,0);
+  background-color: rgba($color-header-background, 0);
 }
 
 .nav-toggle-label {
@@ -23,7 +22,7 @@
 }
 
 .header {
-  color: $color-primary;
+  color: $color-header-links;
   text-align: center;
   position: fixed;
   z-index: 999;
@@ -36,10 +35,10 @@
 
   font-size: 2rem;
   font-weight: 500;
+
   .logo {
     font-family: 'Parisienne', cursive;
     padding-top: 1rem;
-    color: white;
     display: grid;
     padding-left: 2rem;
     grid-column: 1 / 2;
@@ -49,7 +48,7 @@
     position: relative;
     text-align: left;
     transition: none;
-    transform: scale(1,1);
+    transform: scale(1, 1);
     background: none;
     top: initial;
     left: initial;
@@ -71,9 +70,11 @@
 
     li:hover {
       background: none;
+
       a {
         box-shadow: none;
       }
+
       a::before {
         transform: scale(1, 1);
       }
@@ -86,11 +87,12 @@
       color: inherit;
       text-decoration: none;
       font-size: 2rem;
+
       &::before {
         content: '';
         display: block;
         height: 3px;
-        background: $secondary-color;
+        background: $color-tertiary-dark;
         position: absolute;
         bottom: 0.5em;
         left: 0;
@@ -105,13 +107,13 @@
 @include respond(tab-land) {
   .header {
     nav {
+      margin-left: 4rem;
       a {
-        font-size: 1.6rem;
+        font-size: 1.9rem;
       }
     }
   }
 }
-
 
 @include respond(tab-port) {
   .headerScrolled {
@@ -122,35 +124,38 @@
 
   .header {
     height: 4rem;
-   //padding: 0 0;
     display: inline-block;
     text-align: center;
+
     nav {
       position: absolute;
       text-align: left;
       display: block;
       top: 100%;
-      left: 0;
-      background: rgba($background-color,.45);
+      background: rgba($color-header-background, .45);
       transform: scale(1, 0);
       transform-origin: top;
       transition: transform 400ms ease-in-out;
+
       ul {
         display: flex;
         flex-direction: column;
       }
+
       li {
         overflow: hidden;
         margin-left: 0;
+
         &:hover {
           padding: 0;
-          color: $secondary-color;
-          background: rgba($background-color,0.25);
+          color: $color-header-links-hover;
+          background: rgba($color-header-background-hover, 0.25);
           a::before {
             transform: scale(0, 0);
           }
         }
       }
+
       a {
 
       }
@@ -161,8 +166,8 @@
     &:checked ~ nav {
       transform: scale(1, 1);
     }
-    &:checked ~ .nav-toggle-label
-    {
+
+    &:checked ~ .nav-toggle-label {
       span::after {
         transform: translateY(3px) skewY(5deg);
       }
@@ -171,15 +176,17 @@
 
   .nav-toggle-label {
     position: absolute;
-    top:0;
-    left:0;
+    top: 0;
+    left: 0;
     margin-left: 1rem;
     height: 100%;
     display: flex;
     align-items: center;
+
     &:hover {
       cursor: pointer;
     }
+
     span, span::before, span::after {
       display: block;
       background: white;
@@ -188,14 +195,17 @@
       border-radius: 2px;
       position: relative;
     }
+
     span {
       &::before, &::after {
         position: absolute;
         content: '';
       }
+
       &::before {
         bottom: 7px;
       }
+
       &::after {
         transition: transform 400ms ease-in-out;
         top: 7px;
