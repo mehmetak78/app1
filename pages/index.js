@@ -1,5 +1,5 @@
 import styles from '../styles/Home.module.css'
-import {Fragment} from "react";
+import {Fragment, useEffect} from "react";
 import Footer from "../components/Footer";
 import Rooms from "../componentSamples/Rooms";
 
@@ -22,6 +22,10 @@ const Home = (props) => {
         blogSectionRef,
         footerSectionRef
     } = props;
+
+/*    useEffect((effect) => {
+        roomsSectionRef.current.scrollIntoView({behavior: 'smooth'});
+    },[])*/
 
     return (
         <Fragment>

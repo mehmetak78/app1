@@ -6,7 +6,7 @@ const Photos = () => {
     return (
         <div className={styles.photos}>
             Photos
-            <Link href="/#features">Linkt to Features </Link>
+            <Link href="/#features" scroll={true}>Linkt to Features </Link>
         </div>
     );
 };

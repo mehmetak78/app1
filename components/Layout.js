@@ -35,12 +35,15 @@ const Layout = (props) => {
     useEffect(() => {
         setY(window.scrollY);
         window.addEventListener("scroll", (e) => handleNavigation(e));
+
     }, []);
 
     useEffect(() => {
         if (activeRef) {
             console.log(activeRef)
             activeRef.current.scrollIntoView({behavior: 'smooth'});
+            console.log('Here')
+            console.log(router.pathname)
         }
 
     }, [activeRef]);
@@ -48,16 +51,18 @@ const Layout = (props) => {
 
     const handleSectionClick = (e) => {
         e.preventDefault();
-        router.replace('/');
+        router.replace('/#features');
         switch (e.target.id) {
 
             case 'home' :
                 //homeSectionRef.current.scrollIntoView({behavior: 'smooth'});
                 setActiveRef(homeSectionRef);
+
                 break;
             case 'about' :
                 //aboutSectionRef.current.scrollIntoView({behavior: 'smooth'});
                 setActiveRef(aboutSectionRef);
+
                 break;
             case 'features' :
                 featuresSectionRef.current.scrollIntoView({behavior: 'smooth'});
