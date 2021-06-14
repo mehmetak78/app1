@@ -36,7 +36,12 @@ const Home = (props) => {
     const {section} = router.query;
     console.log(section);
     switch (section) {
-      case 'about' : roomsSectionRef.current.scrollIntoView({behavior: 'smooth'});
+      case 'about' : aboutSectionRef.current.scrollIntoView({behavior: 'smooth'});break;
+      case 'features' : featuresSectionRef.current.scrollIntoView({behavior: 'smooth'});break;
+      case 'rooms' : roomsSectionRef.current.scrollIntoView({behavior: 'smooth'});break;
+      case 'stories' : storiesSectionRef.current.scrollIntoView({behavior: 'smooth'});break;
+      case 'booking' : bookingSectionRef.current.scrollIntoView({behavior: 'smooth'});break;
+      case 'content' : footerSectionRef.current.scrollIntoView({behavior: 'smooth'});break;
     }
   }, []);
 
