@@ -1,15 +1,18 @@
 import React from 'react';
+import styles from './About.module.scss';
+
 
 const About = (props) => {
+
   return (
-    <section className="section-about">
+    <section className={styles.sectionAbout}>
       <div className="u-center-text u-margin-bottom-big">
         <h2 className="heading-secondary">
           About Us
         </h2>
       </div>
-      <div className="row">
-        <div className="col-1-of-2">
+      <div className={styles.aboutContent}>
+        <div className={styles.leftContent}>
           <h3 className="heading-tertiary u-margin-bottom-small">Like you are at home...</h3>
           <p className="paragraph">
             All of the rooms in our hotel have balconies, air conditioning and bathrooms. Most rooms come with basic
@@ -28,29 +31,33 @@ const About = (props) => {
             including a restaurant, dining room and bar. Guests arriving by private car can leave them in the
             accommodation's outdoor car park. Additional services include medical support, room service and laundry.
           </p>
-
-          <a href="#" className="btn-text">More Photos &rarr;</a>
         </div>
-        <div className="col-1-of-2">
-          <div className="composition">
+        <div className={styles.imgContent}>
+          <div className={styles.composition}>
             <img srcSet="/img/nat-1.jpg 300w, /img/nat-1-large.jpg 1000w"
                  sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
                  alt="Photo 1"
-                 className="composition__photo composition__photo--p1"
+                 className={`${styles['composition__photo']} ${styles['composition__photo--p1']}`}
                  src="/img/nat-1-large.jpg"/>
 
             <img srcSet="/img/nat-2.jpg 300w, /img/nat-2-large.jpg 1000w"
                  sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
                  alt="Photo 2"
-                 className="composition__photo composition__photo--p2"
+                 className={`${styles['composition__photo']} ${styles['composition__photo--p2']}`}
                  src="/img/nat-2-large.jpg"/>
 
             <img srcSet="/img/nat-3.jpg 300w, /img/nat-3-large.jpg 1000w"
                  sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
                  alt="Photo 3"
-                 className="composition__photo composition__photo--p3"
+                 className={`${styles['composition__photo']} ${styles['composition__photo--p3']}`}
                  src="/img/nat-3-large.jpg"/>
+
           </div>
+        </div>
+        <div className={styles.linkContent}>
+          <button
+            className={`${styles.btn1} ${styles.btnAbout}`}
+          >More Photos</button>
         </div>
       </div>
     </section>

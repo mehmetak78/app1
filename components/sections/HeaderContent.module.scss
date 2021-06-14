@@ -8,7 +8,7 @@
   background-image: linear-gradient(
                   to right bottom,
                   rgba($color-primary-light, 0.2),
-                  rgba($color-primary-dark, 0.5)),
+                  rgba($color-primary-dark, 0.4)),
   url(../../public/imgHS/hs1.jpg);
   background-size: cover;
   background-position: center;
@@ -25,8 +25,8 @@
   only screen and (min-width: 125em) {
     background-image: linear-gradient(
                     to right bottom,
-                    rgba($color-primary-light, 0.8),
-                    rgba($color-primary-dark, 0.8)),
+                    rgba($color-primary-light, 0.2),
+                    rgba($color-primary-dark, 0.4)),
     url(../../public/imgHS/hs1.jpg);
   }
 
@@ -45,14 +45,13 @@
 .textBox {
   position: absolute;
   cursor: pointer;
-  //padding-bottom: 1rem;
   right: 2%;
   bottom: 10%;
   font-family: $header-bottom-font-family;
   font-size: $header-bottom-font-size;
   font-weight: 400;
   letter-spacing: 0.5rem;
-  color: $color-header-text;
+  color: $color-header-links;
   text-align: right;
   transform: rotate(-9deg);
   -webkit-box-reflect: below -2px linear-gradient(transparent, rgba(0,0,0,.82));;
