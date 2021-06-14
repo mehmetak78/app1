@@ -9,6 +9,7 @@ import Stories from "../componentSamples/Stories";
 import Booking from "../componentSamples/Booking";
 import HeaderContent from "../components/sections/HeaderContent";
 import About from "../components/sections/About";
+import {useRouter} from "next/router";
 //import About from "../componentSamples/About";
 
 const Home = (props) => {
@@ -26,6 +27,18 @@ const Home = (props) => {
 /*    useEffect((effect) => {
         roomsSectionRef.current.scrollIntoView({behavior: 'smooth'});
     },[])*/
+
+  const router = useRouter();
+
+
+  useEffect(() => {
+    console.log('useEffect');
+    const {section} = router.query;
+    console.log(section);
+    switch (section) {
+      case 'about' : roomsSectionRef.current.scrollIntoView({behavior: 'smooth'});
+    }
+  }, []);
 
     return (
         <Fragment>
@@ -67,5 +80,12 @@ const Home = (props) => {
     )
 }
 
+export async function getServerSideProps(context) {
+  return {
+    props: {
+
+    }
+  }
+}
 
 export default Home;
