@@ -5,12 +5,13 @@
   background: $color-background-primary;
   min-height: 100vh;
 
+  .headerSpace {
+    height: 15rem;
+  }
+
   .photos {
     position: relative;
-    top: 15rem;
     background: $color-background-primary;
-    padding: 5rem;
-
     z-index: 1;
     display: flex;
     justify-content: center;

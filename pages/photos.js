@@ -6,6 +6,12 @@ const Photos = () => {
 
   return (
     <div className={styles.photosPage}>
+      <div className={styles.headerSpace}> </div>
+      <div className="u-center-text u-margin-bottom-big">
+        <h2 className="heading-secondary">
+          Photos
+        </h2>
+      </div>
       <div className={styles.photos}>
         <div className={styles.boxCross}>
           <div className={styles.imgBox}>
