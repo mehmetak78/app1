@@ -1,19 +1,38 @@
 import React from 'react';
-import Link from 'next/link';
 import styles from '../styles/Photos.module.scss';
-import {useRouter} from "next/router";
+import Image from 'next/image'
 
 const Photos = () => {
 
-  const router = useRouter();
-  const handleButtonClick = () => {
-    router.replace('/?section=about');
-  }
   return (
-    <div className={styles.photos}>
-      Photos
-      <Link href="/?section=about" scroll={true}>Linkt to Features </Link>
-      <button onClick={handleButtonClick}>About</button>
+    <div className={styles.photosPage}>
+      <div className={styles.photos}>
+        <div className={styles.boxCross}>
+          <div className={styles.imgBox}>
+            <Image className={styles.image} src="/imgHs/hs1.jpg" alt="Picture of the author" layout='fill'/>
+          </div>
+        </div>
+        <div className={styles.boxCross}>
+          <div className={styles.imgBox}>
+            <Image className={styles.image} src="/imgHs/hs2.jpg" alt="Picture of the author" layout='fill'/>
+          </div>
+        </div>
+        <div className={styles.boxCross}>
+          <div className={styles.imgBox}>
+            <Image className={styles.image} src="/imgHs/hs3.jpg" alt="Picture of the author" layout='fill'/>
+          </div>
+        </div>
+        <div className={styles.boxCross}>
+          <div className={styles.imgBox}>
+            <Image className={styles.image} src="/imgHs/hs4.jpg" alt="Picture of the author" layout='fill'/>
+          </div>
+        </div>
+        <div className={styles.boxCross}>
+          <div className={styles.imgBox}>
+            <Image className={styles.image} src="/imgHs/hs5.jpg" alt="Picture of the author" layout='fill'/>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

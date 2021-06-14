@@ -41,7 +41,12 @@ const Layout = (props) => {
     console.log(path)
     switch (e.target.id) {
       case 'home' :
-        homeSectionRef.current.scrollIntoView({behavior: 'smooth'});
+        if (path === '/') {
+          homeSectionRef.current.scrollIntoView({behavior: 'smooth'});
+        }
+        else {
+          router.replace('/');
+        }
         break;
       case 'about' :
         if (path === '/') {

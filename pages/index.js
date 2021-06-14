@@ -32,9 +32,7 @@ const Home = (props) => {
 
 
   useEffect(() => {
-    console.log('useEffect');
     const {section} = router.query;
-    console.log(section);
     switch (section) {
       case 'about' : aboutSectionRef.current.scrollIntoView({behavior: 'smooth'});break;
       case 'features' : featuresSectionRef.current.scrollIntoView({behavior: 'smooth'});break;
