@@ -41,6 +41,7 @@ const Home = (props) => {
       case 'rooms' : roomsSectionRef.current.scrollIntoView({behavior: 'smooth'});break;
       case 'stories' : storiesSectionRef.current.scrollIntoView({behavior: 'smooth'});break;
       case 'booking' : bookingSectionRef.current.scrollIntoView({behavior: 'smooth'});break;
+      case 'blog' : bookingSectionRef.current.scrollIntoView({behavior: 'smooth'});break;
       case 'content' : footerSectionRef.current.scrollIntoView({behavior: 'smooth'});break;
     }
   }, []);

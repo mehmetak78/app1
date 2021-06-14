@@ -19,7 +19,6 @@ const Layout = (props) => {
 
   const [y, setY] = useState(0);
 
-
   const handleNavigation = (e) => {
     const window = e.currentTarget;
     /*        if (y > window.scrollY) {
@@ -28,7 +27,6 @@ const Layout = (props) => {
                 console.log("scrolling down");
             }*/
     setY(window.scrollY);
-    //    console.log(window.scrollY)
   };
 
   useEffect(() => {
@@ -36,7 +34,6 @@ const Layout = (props) => {
     window.addEventListener("scroll", (e) => handleNavigation(e));
 
   }, []);
-
 
   const handleSectionClick = (e) => {
     e.preventDefault();
@@ -70,7 +67,7 @@ const Layout = (props) => {
       case 'stories' :
         if (path === '/') {
           storiesSectionRef.current.scrollIntoView({behavior: 'smooth'});
-        }else {
+        } else {
           router.replace('/?section=stories');
         }
         break;
@@ -79,6 +76,13 @@ const Layout = (props) => {
           bookingSectionRef.current.scrollIntoView({behavior: 'smooth'});
         } else {
           router.replace('/?section=booking');
+        }
+        break;
+      case 'blog' :
+        if (path === '/') {
+          blogSectionRef.current.scrollIntoView({behavior: 'smooth'});
+        } else {
+          router.replace('/?section=blog');
         }
         break;
       case 'content' :
@@ -93,19 +97,19 @@ const Layout = (props) => {
   }
 
   const childrenWithProps = React.Children.map(props.children, child => {
-    //   if (child.type.name === 'Home') {
-    if (React.isValidElement(child)) {
-      return React.cloneElement(child, {
-        homeSectionRef: homeSectionRef,
-        aboutSectionRef: aboutSectionRef,
-        featuresSectionRef: featuresSectionRef,
-        roomsSectionRef: roomsSectionRef,
-        storiesSectionRef: storiesSectionRef,
-        bookingSectionRef: bookingSectionRef,
-        blogSectionRef: blogSectionRef,
-        footerSectionRef: footerSectionRef
-      });
-      //         }
+    if (child.type.name === 'Home') {
+      if (React.isValidElement(child)) {
+        return React.cloneElement(child, {
+          homeSectionRef: homeSectionRef,
+          aboutSectionRef: aboutSectionRef,
+          featuresSectionRef: featuresSectionRef,
+          roomsSectionRef: roomsSectionRef,
+          storiesSectionRef: storiesSectionRef,
+          bookingSectionRef: bookingSectionRef,
+          blogSectionRef: blogSectionRef,
+          footerSectionRef: footerSectionRef
+        });
+      }
     }
 
     return child;
@@ -119,19 +123,7 @@ const Layout = (props) => {
           isScrolled={y <= 50}
         />
       </div>
-      {/*            <Home
-                homeSectionRef={homeSectionRef}
-                aboutSectionRef={aboutSectionRef}
-                featuresSectionRef={featuresSectionRef}
-                roomsSectionRef={roomsSectionRef}
-                storiesSectionRef={storiesSectionRef}
-                bookingSectionRef={bookingSectionRef}
-                blogSectionRef={blogSectionRef}
-                footerSectionRef={footerSectionRef}
-            />*/}
-
       {childrenWithProps}
-
     </div>
   );
 };
