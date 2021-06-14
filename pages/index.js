@@ -20,7 +20,8 @@ const Home = (props) => {
         storiesSectionRef,
         bookingSectionRef,
         blogSectionRef,
-        footerSectionRef} = props;
+        footerSectionRef
+    } = props;
 
     return (
         <Fragment>
@@ -28,9 +29,11 @@ const Home = (props) => {
             <section ref={aboutSectionRef}>
                 <About/>
             </section>
-            <section ref={featuresSectionRef}>
+
+            <section id='features' ref={featuresSectionRef}>
                 <Features/>
             </section>
+
             <section ref={roomsSectionRef}>
                 <Rooms/>
             </section>

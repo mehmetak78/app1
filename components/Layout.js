@@ -1,9 +1,12 @@
-import React, {useEffect, useRef, useState} from 'react';
+import React, {Component, useEffect, useRef, useState} from 'react';
 import Header from "./Header";
 import Home from "../pages";
 import styles from "./Header.module.scss";
+import {useRouter} from "next/router";
 
 const Layout = (props) => {
+
+    const router = useRouter();
 
     const homeSectionRef = useRef();
     const aboutSectionRef = useRef();
@@ -15,6 +18,8 @@ const Layout = (props) => {
     const footerSectionRef = useRef();
 
     const [y, setY] = useState(0);
+    const [activeRef, setActiveRef] = useState(null);
+
 
     const handleNavigation = (e) => {
         const window = e.currentTarget;
@@ -32,15 +37,27 @@ const Layout = (props) => {
         window.addEventListener("scroll", (e) => handleNavigation(e));
     }, []);
 
+    useEffect(() => {
+        if (activeRef) {
+            console.log(activeRef)
+            activeRef.current.scrollIntoView({behavior: 'smooth'});
+        }
+
+    }, [activeRef]);
+
 
     const handleSectionClick = (e) => {
         e.preventDefault();
+        router.replace('/');
         switch (e.target.id) {
+
             case 'home' :
-                homeSectionRef.current.scrollIntoView({behavior: 'smooth'});
+                //homeSectionRef.current.scrollIntoView({behavior: 'smooth'});
+                setActiveRef(homeSectionRef);
                 break;
             case 'about' :
-                aboutSectionRef.current.scrollIntoView({behavior: 'smooth'});
+                //aboutSectionRef.current.scrollIntoView({behavior: 'smooth'});
+                setActiveRef(aboutSectionRef);
                 break;
             case 'features' :
                 featuresSectionRef.current.scrollIntoView({behavior: 'smooth'});
@@ -58,7 +75,27 @@ const Layout = (props) => {
                 footerSectionRef.current.scrollIntoView({behavior: 'smooth'});
                 break;
         }
+
     }
+
+    const childrenWithProps = React.Children.map(props.children, child => {
+     //   if (child.type.name === 'Home') {
+            if (React.isValidElement(child)) {
+                return React.cloneElement(child, {
+                    homeSectionRef: homeSectionRef,
+                    aboutSectionRef: aboutSectionRef,
+                    featuresSectionRef:featuresSectionRef,
+                    roomsSectionRef:roomsSectionRef,
+                    storiesSectionRef:storiesSectionRef,
+                    bookingSectionRef:bookingSectionRef,
+                    blogSectionRef:blogSectionRef,
+                    footerSectionRef:footerSectionRef
+                });
+   //         }
+        }
+
+        return child;
+    });
 
     return (
         <div>
@@ -68,7 +105,7 @@ const Layout = (props) => {
                     isScrolled={y <= 50}
                 />
             </div>
-            <Home
+            {/*            <Home
                 homeSectionRef={homeSectionRef}
                 aboutSectionRef={aboutSectionRef}
                 featuresSectionRef={featuresSectionRef}
@@ -77,7 +114,10 @@ const Layout = (props) => {
                 bookingSectionRef={bookingSectionRef}
                 blogSectionRef={blogSectionRef}
                 footerSectionRef={footerSectionRef}
-            />
+            />*/}
+
+            {childrenWithProps}
+
         </div>
     );
 };
