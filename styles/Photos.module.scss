@@ -21,7 +21,7 @@
       margin: 2rem;
       box-shadow: 0 25px 25px -35px rgba(0,0,0,.15);
       position: relative;
-      background: darkblue;
+      background: white;
       width: 400px;
       height: 300px;
       color: blue;
@@ -29,10 +29,11 @@
       justify-content: center;
       align-items: center;
       transition: transform 300ms, box-shadow 300ms;
+
       .imgBox {
         padding: 2rem;
-        width: 98%;
-        height: 98%;
+        width: 97%;
+        height: 97%;
         position: relative;
 
       }
@@ -54,14 +55,14 @@
         background: lightblue;
         left: 5px;
         right: 45px;
-        transform: rotate(-3deg);
+        transform: rotate(-2deg);
       }
 
       &::after {
         background: pink;
         left: 45px;
         right: 5px;
-        transform: rotate(3deg);
+        transform: rotate(2deg);
       }
 
       &:hover {
@@ -86,9 +87,6 @@
           z-index: 99;
         }
       }
-
-
-
 
     }
 
