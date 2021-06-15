@@ -12,8 +12,8 @@ const About = (props) => {
     }
 
     return (
-        <section className={styles.sectionAbout}>
-            <div className="u-center-text u-margin-bottom-big">
+        <section ref={props.sectionRef} className={styles.sectionAbout}>
+            <div className="u-center-text ">
                 <h2 className="heading-secondary">
                     About Us
                 </h2>
@@ -22,16 +22,21 @@ const About = (props) => {
                 <div className={styles.leftContent}>
                     <h3 className="heading-tertiary u-margin-bottom-small">Like you are at home...</h3>
                     <p className="paragraph">
-                        All of the rooms in our hotel have balconies, air conditioning and bathrooms. Most rooms come
+                        All of the rooms in our hotel have balconies, air conditioning and bathrooms. Most rooms
+                        come
                         with basic
-                        seating and balcony seating. The double bed in our rooms provides a pleasant night's rest. In
+                        seating and balcony seating. The double bed in our rooms provides a pleasant night's rest.
+                        In
                         addition,
-                        there is a safe and a minibar. Internet access and television offer complete holiday comfort.
+                        there is a safe and a minibar. Internet access and television offer complete holiday
+                        comfort.
                         The bathrooms
-                        come with a shower. A hairdryer is also provided. It offers family rooms and non-smoking rooms.
+                        come with a shower. A hairdryer is also provided. It offers family rooms and non-smoking
+                        rooms.
                         Our hotel
                         was built in 2011. The air-conditioned property has
-                        60 rooms. These rooms are located in the main building (3 floors) and in 6 side buildings (up to
+                        60 rooms. These rooms are located in the main building (3 floors) and in 6 side buildings
+                        (up to
                         2 floors).
                     </p>
 
@@ -39,13 +44,16 @@ const About = (props) => {
                     <p className="paragraph">
                         All floors are easily accessible by elevator or staircase. Services such as a cloakroom and
                         currency
-                        exchange contribute to the existing comfort. The internet connection in the common areas allows
+                        exchange contribute to the existing comfort. The internet connection in the common areas
+                        allows
                         the
                         passengers to stay in touch with the outside world. A variety of gastronomic services are
                         available,
-                        including a restaurant, dining room and bar. Guests arriving by private car can leave them in
+                        including a restaurant, dining room and bar. Guests arriving by private car can leave them
+                        in
                         the
-                        accommodation's outdoor car park. Additional services include medical support, room service and
+                        accommodation's outdoor car park. Additional services include medical support, room service
+                        and
                         laundry.
                     </p>
                 </div>
@@ -82,6 +90,7 @@ const About = (props) => {
                     </div>
                 </div>
             </div>
+
         </section>
     );
 };

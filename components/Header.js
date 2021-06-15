@@ -1,10 +1,17 @@
 import React, {Fragment, useEffect, useRef, useState} from 'react';
 import styles from './Header.module.scss';
+import {useRouter} from "next/router";
 
 const Header = (props) => {
-    const headerClass = props.isScrolled
-        ? `${styles.header} ${styles.headerNotScrolled}`
-        : `${styles.header} ${styles.headerScrolled}`;
+
+    const router = useRouter();
+    const path = router.pathname;
+
+    let headerClass = `${styles.header} ${styles.headerScrolled}`;
+
+    if ( !props.isScrolled) {
+        headerClass = `${styles.header} ${styles.headerNotScrolled}`;
+    }
 
     return (
         <Fragment>

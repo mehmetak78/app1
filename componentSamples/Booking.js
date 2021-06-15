@@ -2,7 +2,7 @@ import React from 'react';
 
 const Booking = (props) => {
   return (
-    <section className="section-book">
+    <section ref={props.sectionRef} className="section-book">
       <div className="row">
         <div className="book">
           <div className="book__form">

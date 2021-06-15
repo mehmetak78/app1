@@ -1,0 +1,36 @@
+@import '../../styles/abstracts/_variables.scss';
+
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 20;
+    background-color: rgba($color-background-primary-mask, 0.2);
+}
+
+.modal {
+    position: fixed;
+    top: 10rem;
+    left: 5%;
+    width: 90%;
+    height: calc(90% - 10rem);
+    background-color: white;
+    padding: 1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.75);
+    z-index: 999;
+    animation: slide-down 700ms ease-out forwards;
+}
+
+
+@keyframes slide-down {
+    from {
+        opacity: 0;
+        transform: translateY(-3rem);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

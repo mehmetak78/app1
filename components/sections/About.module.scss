@@ -4,15 +4,17 @@
 
 .sectionAbout {
   background-color: $color-background-about-section;
-  padding: 25rem 0 20rem  0;
+  padding: 25rem 0 15rem  0;
   margin-top: -25vh;
 
   .aboutContent {
     min-height: 50rem;
     display: flex;
     padding: 2rem 6rem 0  6rem;
+    justify-content: center;
    .leftContent {
      width: 50%;
+     max-width: 50rem;
     }
     .rightContent {
       width: 50%;
@@ -25,7 +27,7 @@
         width: 70%;
       }
       .linkContent {
-        margin-top: 15rem;
+        margin-top: 5rem;
       }
     }
   }

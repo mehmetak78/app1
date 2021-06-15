@@ -2,7 +2,7 @@ import React from 'react';
 
 const Rooms = (props) => {
   return (
-    <section className="section-tours" id="section-tours">
+    <section ref={props.sectionRef} className="section-tours" id="section-tours">
       <div className="row">
         <div className="col-1-of-3">
           <div className="card">

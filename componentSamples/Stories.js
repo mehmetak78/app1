@@ -2,7 +2,7 @@ import React from 'react';
 
 const Stories = (props) => {
   return (
-    <section className="section-stories">
+    <section ref={props.sectionRef} className="section-stories">
       <div className="bg-video">
         <video className="bg-video__content" autoPlay muted loop>
           <source src="img/video.mp4" type="video/mp4"/>
