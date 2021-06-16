@@ -20,6 +20,8 @@ const Layout = (props) => {
 
     const [y, setY] = useState(0);
 
+    let path = router.pathname;
+
     const handleNavigation = (e) => {
         const window = e.currentTarget;
         /*        if (y > window.scrollY) {
@@ -38,8 +40,9 @@ const Layout = (props) => {
 
     const handleSectionClick = (e) => {
         e.preventDefault();
-        const path = router.pathname;
+        path = router.pathname;
         console.log(path)
+
         switch (e.target.id) {
             case 'home' :
                 if (path === '/') {
@@ -109,6 +112,7 @@ const Layout = (props) => {
         setIsModalOpen(true);
     }
 
+/*
     const childrenWithProps = React.Children.map(props.children, child => {
         if (React.isValidElement(child)) {
             if (child.type.name === 'Home') {
@@ -128,6 +132,8 @@ const Layout = (props) => {
 
         return child;
     });
+*/
+
 
     return (
         <div>
@@ -137,7 +143,21 @@ const Layout = (props) => {
                     isScrolled={y > 50}
                 />
             </div>
-            {childrenWithProps}
+            {/*{childrenWithProps}*/}
+            {path === '/'
+                ? <Home
+                    homeSectionRef={homeSectionRef}
+                    aboutSectionRef={aboutSectionRef}
+                    featuresSectionRef ={featuresSectionRef}
+                    roomsSectionRef={roomsSectionRef}
+                    storiesSectionRef={storiesSectionRef}
+                    bookingSectionRef={bookingSectionRef}
+                    blogSectionRef={blogSectionRef}
+                    footerSectionRef={footerSectionRef}>
+
+                </Home>
+                : props.children
+            }
         </div>
     );
 };

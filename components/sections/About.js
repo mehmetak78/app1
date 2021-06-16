@@ -7,8 +7,10 @@ const About = (props) => {
 
     const router = useRouter();
 
-    const handleMorePhotosClick = () => {
-        router.replace('./photos');
+    const handleMorePhotosClick = (e) => {
+        e.preventDefault();
+        console.log('handleMorePhotosClick');
+        router.push('./photos');
     }
 
     return (

@@ -22,12 +22,7 @@ const Home = (props) => {
         footerSectionRef
     } = props;
 
-    /*    useEffect((effect) => {
-            roomsSectionRef.current.scrollIntoView({behavior: 'smooth'});
-        },[])*/
-
     const router = useRouter();
-
 
     useEffect(() => {
         const {section} = router.query;
