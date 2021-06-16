@@ -55,6 +55,7 @@ const About = (props) => {
                         accommodation's outdoor car park. Additional services include medical support, room service
                         and
                         laundry.
+
                     </p>
                 </div>
                 <div className={styles.rightContent}>
