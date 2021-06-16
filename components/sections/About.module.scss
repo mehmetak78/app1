@@ -7,8 +7,12 @@
   padding: 25vh 0 15rem  0;
   margin-top: -25vh;
 
+
   .aboutContent {
     min-height: 50rem;
+    max-width: 1800px;
+    margin: auto;
+    text-align: center;
     display: flex;
     padding: 2rem 6rem 0  6rem;
     justify-content: center;
