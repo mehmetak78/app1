@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './About.module.scss';
 import {useRouter} from "next/router";
+import Button from "../UI/Button";
 
 
 const About = (props) => {
@@ -84,12 +85,12 @@ const About = (props) => {
                         </div>
                     </div>
                     <div className={styles.linkContent}>
-                        <button
-                            className={`${styles.btn1} ${styles.btnAbout}`}
+                        <Button
+                            btnType='btn1'
+                            className={styles.btnAbout}
                             onClick={handleMorePhotosClick}
-                        >
-                            More Photos
-                        </button>
+                        > More Photos
+                        </Button>
                     </div>
                 </div>
             </div>

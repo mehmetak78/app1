@@ -1,12 +1,16 @@
 import styles from '../styles/Home.module.css'
 import {Fragment, useEffect} from "react";
-import Footer from "../components/Footer";
-import Rooms from "../componentSamples/Rooms";
-import Features from "../componentSamples/Features";
-import Stories from "../componentSamples/Stories";
-import Booking from "../componentSamples/Booking";
 import HeaderContent from "../components/sections/HeaderContent";
 import About from "../components/sections/About";
+import Features from "../components/sections/Features";
+//import Features from "../componentSamples/Features";
+import Footer from "../components/Footer";
+
+import Rooms from "../componentSamples/Rooms";
+import Stories from "../componentSamples/Stories";
+import Booking from "../componentSamples/Booking";
+
+
 import {useRouter} from "next/router";
 
 

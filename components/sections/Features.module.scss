@@ -1,0 +1,51 @@
+@import '../../styles/abstracts/_variables.scss';
+@import '../../styles/abstracts/_mixins.scss';
+
+
+.sectionFeatures {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+
+  padding: 20rem 0;
+  background-image: linear-gradient(
+                  to right bottom,
+                  rgba($color-primary-light, 0.9),
+                  rgba($color-primary-dark, 0.9)),
+  url(../../public/imgHS/hs5.jpg);
+  background-size: cover;
+  transform: skewY(-5deg);
+  margin-top: -13rem;
+
+
+  .featureBox {
+    background-color: rgba($color-white, .8);
+    width: 24rem;
+    font-size: 1.5rem;
+    padding: 2.5rem;
+    margin: 2.5rem;
+    text-align: center;
+    transform: skewY(5deg);
+    border-radius: 3px;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
+    transition: transform .3s;
+
+    @include respond(tab-land) {
+      padding: 2rem;
+      width: 40rem;
+    }
+
+    @include respond(tab-port) {
+      padding: 2rem;
+      width: 50rem;
+    }
+
+
+
+    &:hover {
+      transform: skewY(5deg) translateY(-2.5rem) scale(1.03);
+    }
+  }
+
+}
