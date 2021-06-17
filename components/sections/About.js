@@ -26,15 +26,10 @@ const About = (props) => {
                     <h3 className="heading-tertiary u-margin-bottom-small">Like you are at home...</h3>
                     <p className="paragraph">
                         All of the rooms in our hotel have balconies, air conditioning and bathrooms. Most rooms
-                        come
-                        with basic
-                        seating and balcony seating. The double bed in our rooms provides a pleasant night's rest.
-                        In
-                        addition,
-                        there is a safe and a minibar. Internet access and television offer complete holiday
+                        come with basic seating and balcony seating. The double bed in our rooms provides a pleasant night's rest.
+                        In addition, there is a safe and a minibar. Internet access and television offer complete holiday
                         comfort.
-                        The bathrooms
-                        come with a shower. A hairdryer is also provided. It offers family rooms and non-smoking
+                        The bathrooms come with a shower. A hairdryer is also provided. It offers family rooms and non-smoking
                         rooms.
                         Our hotel
                         was built in 2011. The air-conditioned property has
@@ -86,7 +81,7 @@ const About = (props) => {
                     </div>
                     <div className={styles.linkContent}>
                         <Button
-                            btnType='btn1'
+                            buttontype='btn1'
                             className={styles.btnAbout}
                             onClick={handleMorePhotosClick}
                         > More Photos

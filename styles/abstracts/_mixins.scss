@@ -37,6 +37,9 @@ ORDER: Base + typography > general layout + grid > page layout > components
     @if $breakpoint == phone {
         @media only screen and (max-width: 37.5em) { @content };    //600px
     }
+    @if $breakpoint == phoneHoverNone {
+        @media only screen and (max-width: 37.5em),  only screen and (hover: none) { @content }; //600px hover none
+    }
     @if $breakpoint == tab-port {
         @media only screen and (max-width: 56.25em) { @content };     //900px
     }

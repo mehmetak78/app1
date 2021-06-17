@@ -5,7 +5,7 @@ import {iconColor1, iconColor2, iconWeight, iconHeight} from './';
 
 const IconWay = () => {
     return (
-        <svg enable-background="new 0 0 128 128" id="Слой_1" version="1.1" viewBox="0 0 128 128"
+        <svg enableBackground="new 0 0 128 128" id="Слой_1" version="1.1" viewBox="0 0 128 128"
              height={iconHeight}
              width={iconWeight}>
             <line fill={iconColor1} x1="58.5" x2="58.5" y1="64.5" y2="49.6"/>

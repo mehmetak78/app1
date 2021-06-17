@@ -5,7 +5,7 @@ const Button = (props) => {
 
     let buttonClasses;
 
-    switch (props.btnType) {
+    switch (props.buttontype) {
         case 'btn1' : buttonClasses = `${styles.btn1} ${props.className}`; break;
     }
 

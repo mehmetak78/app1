@@ -1,0 +1,292 @@
+@import '../../styles/abstracts/_variables.scss';
+@import '../../styles/abstracts/_mixins.scss';
+
+.sectionRooms {
+  background-color: $color-background-rooms-section;
+  padding: 25rem 0 15rem 0;
+  margin-top: -10rem;
+
+  .cardsContent {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+  @include respond(tab-port) {
+    padding: 20rem 0 10rem 0;
+  }
+}
+
+/*
+    perspective: 150rem; => The perspective must be in the parent of the element who is being rotated
+                : The pixels need to be very high. For so, it is 150rem
+    -moz-perspective: 150rem; => To make perspective work in Firefox
+    backface-visibility: hidden; => We will no longer see the back side of the card.
+    height: 52rem; => when we use position:absolute, all the elements are float and looses the height. So we have to specifiy its height
+    overflow: hidden; => if we don't use this, the image overlaps the curves of the borders. So use it for the border radius
+ */
+
+
+
+.card {
+  width: 32.5rem;
+  margin: 2rem;
+  perspective: 150rem;
+  -moz-perspective: 150rem;
+  position: relative;
+  height: 52rem;
+
+  &__side {
+    height: 52rem;
+    transition: all .8s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 1.5rem 4rem rgba($color-primary, .75);
+
+    &--front {
+      background-color: $color-white;
+    }
+
+    &--back {
+      transform: rotateY(180deg);
+
+      &-1 {
+        background-image: linear-gradient(to right bottom, $color-background-rooms-room1-dark, $color-background-rooms-room1-light);
+      }
+
+      &-2 {
+        background-image: linear-gradient(to right bottom, $color-background-rooms-room2-dark, $color-background-rooms-room2-light);
+      }
+
+      &-3 {
+        background-image: linear-gradient(to right bottom, $color-background-rooms-room3-dark, $color-background-rooms-room3-light);
+      }
+      &-4 {
+        background-image: linear-gradient(to right bottom, $color-background-rooms-room4-dark, $color-background-rooms-room4-light);
+      }
+    }
+  }
+
+
+  /*
+      .card:hover .card_side--front => when we hover the card card-side__front  will be transformed
+   */
+  &:hover &__side--front {
+    transform: rotateY(-180deg);
+  }
+
+  &:hover &__side--back {
+    transform: rotateY(0);
+  }
+
+
+  /*
+      background-blend-mode: screen; => blend the gradient color and image for the background of the card
+              Doesn't work in IE, but works in Chrome, Safari, Firefox
+      clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%); => we can also use circle, etc instead of polygon for clip.
+   */
+  &__picture {
+    background-size: cover;
+    height: 23rem;
+    background-blend-mode: overlay;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+
+
+    &--1 {
+      background-image: linear-gradient(to right bottom, $color-background-rooms-room1-dark, $color-background-rooms-room1-light),
+      url(../../public/imgHS/hsSuiteRoom.jpg);
+    }
+
+    &--2 {
+      background-image: linear-gradient(to right bottom, $color-background-rooms-room2-dark, $color-background-rooms-room2-light),
+      url(../../public/imgHS/hsStandardRoom.jpg);
+    }
+
+    &--3 {
+      background-image: linear-gradient(to right bottom, $color-background-rooms-room3-dark, $color-background-rooms-room3-light),
+      url(../../public/imgHS/hsBoutiqueRoom.jpg);
+    }
+    &--4 {
+      background-image: linear-gradient(to right bottom, $color-background-rooms-room4-dark, $color-background-rooms-room4-light),
+      url(../../public/imgHS/hsHoneyMoonRoom.jpg);
+    }
+  }
+
+  &__heading {
+    font-size: 2.8rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    text-align: right;
+    color: $color-rooms-card-header-text;
+    position: absolute;
+    top: 12rem;
+    right: 2rem;
+    width: 75%;
+
+  }
+
+  /*
+      box-decoration-break: clone; => When the text goes to 2 lines, the paddings should be applied to both lines of the text.
+              we use thie box decoration in order to show browser to treat both lines as different elements, and so we can see the paddings
+              in both lines. One element, two boxes and they are both decorated with css, for here padding.
+   */
+  &__heading-span {
+    padding: 1rem 1.5rem;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+
+    &--1 {
+      background-image: linear-gradient(to right bottom,
+              rgba($color-background-rooms-room1-dark, .85),
+              rgba($color-background-rooms-room1-light, .85));
+    }
+
+    &--2 {
+      background-image: linear-gradient(to right bottom,
+              rgba($color-background-rooms-room2-dark, .85),
+              rgba($color-background-rooms-room2-light, .85));
+    }
+
+    &--3 {
+      background-image: linear-gradient(to right bottom,
+              rgba($color-background-rooms-room3-dark, .85),
+              rgba($color-background-rooms-room3-light, .85));
+    }
+    &--4 {
+      background-image: linear-gradient(to right bottom,
+              rgba($color-background-rooms-room4-dark, .85),
+              rgba($color-background-rooms-room4-light, .85));
+    }
+  }
+
+  /*
+      margin: 0 auto; => To center a block element inside a block element
+   */
+  &__details {
+    padding: 3rem;
+
+    ul {
+      list-style: none;
+      width: 80%;
+      margin: 0 auto;
+
+      li {
+        text-align: center;
+        font-size: 1.5rem;
+        padding: 1rem;
+
+        &:not(:last-child) {
+          border-bottom: 1px solid $color-grey-light-2;
+        }
+      }
+    }
+  }
+
+  /*
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+              => centers in both directions, vertically and horizontally
+   */
+  &__cta {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    text-align: center;
+  }
+
+  &__price-box {
+    text-align: center;
+    color: $color-rooms-card-price-text;
+    margin-bottom: 8rem;
+  }
+
+  &__price-only {
+    font-size: 1.4rem;
+    text-transform: uppercase;
+  }
+
+  &__price-value {
+    font-size: 6rem;
+    font-weight: 100;
+  }
+
+
+  @include respond(phoneHoverNone) {
+    width: 45rem;
+    height: auto;
+    border-radius: 20px;
+    background-color: $color-white;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
+
+    &__side {
+      height: auto;
+      position: relative;
+      box-shadow: none;
+
+      &--back {
+        transform: rotateY(0);
+        clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);
+      }
+    }
+
+    &:hover &__side--front {
+      transform: rotateY(0);
+    }
+
+
+    &__details {
+      padding: 1rem 3rem;
+    }
+
+    // FRONT SIDE STYLING
+    &__cta {
+      position: relative;
+      top: 0%;
+      left: 0;
+      transform: translate(0);
+      width: 100%;
+      padding: 7rem 4rem 4rem 4rem;
+    }
+
+    &__price-box {
+      margin-bottom: 3rem;
+    }
+
+    &__price-value {
+      font-size: 4rem;
+    }
+  }
+
+
+}
+
+  .btnBookRoom {
+    border-radius: 4rem;
+    color: $color-rooms-card-button-text;
+    font-size: 1.4rem;
+    letter-spacing: 1.2px;
+    &--1 {
+      background: $color-background-rooms-room1-dark;
+    }
+    &--2 {
+      background: $color-background-rooms-room2-dark;
+    }
+    &--3 {
+      background: $color-background-rooms-room3-dark;
+    }
+    &--4 {
+      background: $color-background-rooms-room4-dark;
+    }
+  }
