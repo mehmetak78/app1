@@ -16,3 +16,4 @@ Google Icons / Material Icons
 Font Awesome
     - https://www.kindacode.com/article/how-to-use-font-awesome-5-icons-in-next-js/
 
+    box-shadow: 0 1.5rem 4rem rgba($color-primary, .75);
