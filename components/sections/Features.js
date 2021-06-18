@@ -10,7 +10,6 @@ import IconHealth from "../icons/IconHealth";
 const Features = (props) => {
     return (
         <section ref={props.sectionRef} className={styles.sectionFeatures}>
-
             <div className={styles.featureBox}>
                 <IconWorld/>
                 <h3 className="heading-tertiary u-margin-bottom-small">Holiday Point</h3>

@@ -5,6 +5,11 @@ import Button from "../UI/Button";
 const Rooms = (props) => {
     return (
         <section ref={props.sectionRef} className={styles.sectionRooms}>
+            <div className="u-center-text ">
+                <h2 className="heading-secondary">
+                    Rooms
+                </h2>
+            </div>
             <div className={styles.cardsContent}>
                 <div className={styles.card}>
                     <div className={`${styles["card__side"]} ${styles["card__side--front"]}`}>
