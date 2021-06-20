@@ -4,16 +4,18 @@ import HeaderContent from "../components/sections/HeaderContent";
 import About from "../components/sections/About";
 import Features from "../components/sections/Features";
 import Rooms from "../components/sections/Rooms";
-//import Rooms from "../componentSamples/Rooms";
+
+import Stories from "../components/sections/Stories";
+//import Stories from "../componentSamples/Stories";
 
 import Footer from "../components/Footer";
 
 
-import Stories from "../componentSamples/Stories";
 import Booking from "../componentSamples/Booking";
 
 
 import {useRouter} from "next/router";
+import SectionWithVideoBackground from "../components/sections/SectionWithVideoBackground";
 
 
 const Home = (props) => {
