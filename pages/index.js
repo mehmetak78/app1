@@ -5,7 +5,7 @@ import About from "../components/sections/About";
 import Features from "../components/sections/Features";
 import Rooms from "../components/sections/Rooms";
 
-import Stories from "../components/sections/Stories";
+import Stories from "../components/sections/Stories2";
 //import Stories from "../componentSamples/Stories";
 
 import Footer from "../components/Footer";
