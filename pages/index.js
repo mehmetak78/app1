@@ -13,9 +13,7 @@ import Footer from "../components/Footer";
 
 import Booking from "../componentSamples/Booking";
 
-
 import {useRouter} from "next/router";
-import SectionWithVideoBackground from "../components/sections/SectionWithVideoBackground";
 
 
 const Home = (props) => {

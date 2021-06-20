@@ -18,19 +18,16 @@
 }
 
 .story {
-  width: 60%;
+  width: 80%;
   margin: 3rem auto;
   padding: 6rem;
   box-shadow: 0 3rem 6rem rgba(black, .1);
   background-color: rgba(white, .6);
-  //border-radius: 3px;
-
 
   font-size: $default-font-size;
 
   transform: skewX(-6deg);
   display: flex;
-  //flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
@@ -48,16 +45,9 @@
     transform: skewX(0);
   }
 
-  /*
-         shape-outside: circle(50% at 50% 50%); => The image will be inside a circle.
-                 It will work if only it is floated and it has width and height
-         clip-path: circle(50% at 50% 50%);
-         float: left; => Image will floated to left and other content (text here) will be floated around the circle
-      */
   &__shape {
     width: 15rem;
     height: 15rem;
-    float: left;
     transform: skewX(6deg);
     position: relative;
     overflow: hidden;
@@ -67,14 +57,6 @@
     justify-content: center;
     align-items: center;
     transition: all .5s;
-
-    @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
-      -webkit-clip-path: circle(50% at 50% 50%);
-      clip-path: circle(50% at 50% 50%);
-      -webkit-shape-outside: circle(50% at 50% 50%);
-      shape-outside: circle(50% at 50% 50%);
-      border-radius: none;
-    }
 
     @include respond(phone) {
       transform:  skewX(0);
@@ -98,16 +80,6 @@
   }
 
   &__caption {
-/*    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, 20%);
-    color: $color-white;
-    font-size: 1.6rem;
-    text-align: center;
-    opacity: 0;
-    transition: all .5s;
-    backface-visibility: hidden;*/
     color: $color-primary;
     transition: all 1s ease-out;
     opacity: 0;
@@ -115,17 +87,13 @@
 
   &:hover &__caption {
     opacity: 1;
-    //transform: translate(-50%, -50%);
+
   }
 
-  /*
-      filter: blur(3px) brightness(80%); => filter images
-   */
   &:hover &__img {
     transform:  scale(1.1);
-    //filter: blur(3px) brightness(80%);
-  }
 
+  }
 
 }
 .btnStories {
