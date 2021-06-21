@@ -5,7 +5,7 @@ import Button from "../UI/Button";
 const Stories = (props) => {
   return (
     <section ref={props.sectionRef} className={styles.sectionStories}>
-      <div className="u-center-text u-margin-bottom-big">
+      <div className="u-center-text u-margin-bottom-small">
         <h2 className="heading-secondary">
           Guest Stories
         </h2>
@@ -13,12 +13,16 @@ const Stories = (props) => {
 
       <div className={styles.storiesContent}>
         <div className={styles['story']}>
-          <figure className={styles["story__shape"]}>
-            <img src="imgHS/guest1.jpg" alt="Person on a tour" className={styles["story__img"]}/>
+          <div className={styles.leftPart}>
+            <figure className={styles["story__shape"]}>
+              <img src="imgHS/guest3.jpg" alt="Guest" className={styles["story__img"]}/>
+
+            </figure>
             <figcaption className={styles["story__caption"]}>Mrs. Brown</figcaption>
-          </figure>
+          </div>
+
           <div className={styles["story__text"]}>
-            <h3 className="heading-tertiary u-margin-bottom-small">Good memories</h3>
+            <h3 className="heading-tertiary">Good memories</h3>
             <blockquote className='blocquote'>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ipsum sapiente aspernatur libero
               repellat quis consequatur
@@ -31,12 +35,14 @@ const Stories = (props) => {
 
 
         <div className={styles.story}>
-          <figure className={styles["story__shape"]}>
-            <img src="imgHS/guest2.jpg" alt="Person on a tour" className={styles["story__img"]}/>
+          <div className={styles.leftPart}>
+            <figure className={styles["story__shape"]}>
+              <img src="imgHS/guest4.jpg" alt="Guest" className={styles["story__img"]}/>
+            </figure>
             <figcaption className={styles["story__caption"]}>Mr. White</figcaption>
-          </figure>
+          </div>
           <div className={styles["story__text"]}>
-            <h3 className="heading-tertiary u-margin-bottom-small">Sweet Holiday</h3>
+            <h3 className="heading-tertiary">My Sweet Holiday</h3>
             <blockquote className='blocquote'>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ipsum sapiente aspernatur libero
               repellat quis consequatur

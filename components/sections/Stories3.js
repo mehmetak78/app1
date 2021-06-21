@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './Stories2.module.scss'
+import styles from './Stories3.module.scss'
 import Button from "../UI/Button";
 
 const Stories = (props) => {
@@ -16,7 +16,6 @@ const Stories = (props) => {
           <div className={styles.leftPart}>
             <figure className={styles["story__shape"]}>
               <img src="imgHS/guest3.jpg" alt="Guest" className={styles["story__img"]}/>
-
             </figure>
             <figcaption className={styles["story__caption"]}>Mrs. Brown</figcaption>
           </div>
