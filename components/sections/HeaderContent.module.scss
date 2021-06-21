@@ -5,11 +5,11 @@
   display: flex;
   justify-content: center;
   height: 100vh;
-/*  background-image: linear-gradient(
+  background-image: linear-gradient(
                   to right bottom,
-                  rgba($color-primary-light, 0.2),
+                  rgba($color-primary-light, 0),
                   rgba($color-primary-dark, 0.4)),
-  url(../../public/imgHS/hs1.jpg);*/
+  url(../../public/imgHS/hs1.jpg);
   background-size: cover;
   background-position: center;
   position: relative;

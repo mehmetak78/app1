@@ -15,14 +15,14 @@ const Stories = (props) => {
         <div className={styles['story']}>
           <div className={styles.leftPart}>
             <figure className={styles["story__shape"]}>
-              <img src="imgHS/guest1.jpg" alt="Person on a tour" className={styles["story__img"]}/>
+              <img src="imgHS/guest3.jpg" alt="Guest" className={styles["story__img"]}/>
 
             </figure>
             <figcaption className={styles["story__caption"]}>Mrs. Brown</figcaption>
           </div>
 
           <div className={styles["story__text"]}>
-            <h3 className="heading-tertiary u-margin-bottom-small">Good memories</h3>
+            <h3 className="heading-tertiary">Good memories</h3>
             <blockquote className='blocquote'>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ipsum sapiente aspernatur libero
               repellat quis consequatur
@@ -37,12 +37,12 @@ const Stories = (props) => {
         <div className={styles.story}>
           <div className={styles.leftPart}>
             <figure className={styles["story__shape"]}>
-              <img src="imgHS/guest2.jpg" alt="Person on a tour" className={styles["story__img"]}/>
+              <img src="imgHS/guest4.jpg" alt="Guest" className={styles["story__img"]}/>
             </figure>
             <figcaption className={styles["story__caption"]}>Mr. White</figcaption>
           </div>
           <div className={styles["story__text"]}>
-            <h3 className="heading-tertiary u-margin-bottom-small">Sweet Holiday</h3>
+            <h3 className="heading-tertiary">My Sweet Holiday</h3>
             <blockquote className='blocquote'>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ipsum sapiente aspernatur libero
               repellat quis consequatur
