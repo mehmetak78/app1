@@ -1,0 +1,117 @@
+@import '../../styles/abstracts/_variables.scss';
+@import '../../styles/abstracts/_mixins.scss';
+
+.sectionStories {
+  background-color: $color-background-stories-section;
+  position: relative;
+  padding: 8rem 0;
+  text-align: center;
+
+  .storiesContent {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 120rem;
+  }
+}
+
+.story {
+  width: 80%;
+  margin: 3rem auto;
+  padding: 6rem;
+  box-shadow: 0 3rem 6rem rgba(black, .1);
+  background-color: rgba(white, .6);
+  //border-radius: 3px;
+
+
+  font-size: $default-font-size;
+  transform: skewX(-6deg);
+  display: flex;
+
+
+
+  @include respond(phone) {
+    transform: skewX(0);
+  }
+
+  /*
+         shape-outside: circle(50% at 50% 50%); => The image will be inside a circle.
+                 It will work if only it is floated and it has width and height
+         clip-path: circle(50% at 50% 50%);
+         float: left; => Image will floated to left and other content (text here) will be floated around the circle
+      */
+  &__shape {
+    width: 15rem;
+    height: 15rem;
+    float: left;
+    transform: translateX(-3rem) skewX(6deg);
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
+
+    @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
+      -webkit-clip-path: circle(50% at 50% 50%);
+      clip-path: circle(50% at 50% 50%);
+      -webkit-shape-outside: circle(50% at 50% 50%);
+      shape-outside: circle(50% at 50% 50%);
+      border-radius: none;
+    }
+
+    @include respond(phone) {
+      transform: translateX(-3rem) skewX(0);
+    }
+  }
+
+  &__img {
+    height: 100%;
+
+    transform: scale(1.1);
+    backface-visibility: hidden;
+    transition: all .5s;
+  }
+
+  &__text {
+    width: 80%;
+    transform: skewX(6deg);
+    @include respond(phone) {
+      transform: skewX(0);
+    }
+  }
+
+  &__caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 20%);
+    color: $color-white;
+    font-size: 1.6rem;
+    text-align: center;
+    opacity: 0;
+    transition: all .5s;
+    backface-visibility: hidden;
+  }
+
+  &:hover &__caption {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+
+  /*
+      filter: blur(3px) brightness(80%); => filter images
+   */
+  &:hover &__img {
+    transform:  scale(1);
+    filter: blur(3px) brightness(80%);
+  }
+
+}
+.btnStories {
+  display: inline;
+  width: 20rem;
+  background: $color-background-stories-button;
+  color: $color-header-links;
+  font-size: 1.4rem;
+  letter-spacing: 1.2px;
+}

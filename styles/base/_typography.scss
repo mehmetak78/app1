@@ -12,6 +12,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;700&display=swap" rel="stylesheet');
 @import url('https://fonts.googleapis.com/css2?family=Parisienne&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Spirax&display=swap');
+
 body {
     font-family: "SansSerif", sans-serif;
     font-weight: 400;
@@ -112,5 +114,29 @@ body {
     font-weight: 100;
     &:not(:last-child) {
         margin-bottom: 2rem;
+    }
+}
+
+.blocquote {
+    font-size: 1.3rem;
+    font-weight: 100;
+    display: inline-block;
+    position: relative;
+
+    &::before, &::after {
+        font-family: 'Spirax', cursive;
+        font-size: 3rem;
+        font-weight: 700;
+    }
+
+    &::before {
+        content: open-quote;
+        padding-right: 0.5rem;
+        top: 0;
+    }
+    &::after {
+        content: close-quote;
+        position: absolute;
+        padding-left: 0.5rem;
     }
 }
