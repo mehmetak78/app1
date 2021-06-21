@@ -1,11 +1,11 @@
 import React from 'react';
-import styles from './Stories3.module.scss'
+import styles from './Stories2.module.scss'
 import Button from "../UI/Button";
 
-const Stories = (props) => {
+const Stories2 = (props) => {
   return (
     <section ref={props.sectionRef} className={styles.sectionStories}>
-      <div className="u-center-text u-margin-bottom-big">
+      <div className="u-center-text u-margin-bottom-small">
         <h2 className="heading-secondary">
           Guest Stories
         </h2>
@@ -16,6 +16,7 @@ const Stories = (props) => {
           <div className={styles.leftPart}>
             <figure className={styles["story__shape"]}>
               <img src="imgHS/guest3.jpg" alt="Guest" className={styles["story__img"]}/>
+
             </figure>
             <figcaption className={styles["story__caption"]}>Mrs. Brown</figcaption>
           </div>
@@ -63,4 +64,4 @@ const Stories = (props) => {
   );
 };
 
-export default Stories;
+export default Stories2;

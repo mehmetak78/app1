@@ -4,7 +4,7 @@
 .sectionStories {
   background-color: $color-background-stories-section;
   position: relative;
-  padding: 6rem 0;
+  padding: 8rem 0;
   text-align: center;
 
   .storiesContent {
@@ -13,72 +13,63 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    max-width: 120rem;
+    max-width: 100rem;
   }
 }
 
 .story {
   width: 80%;
   margin: 3rem auto;
-  padding: 3rem 3rem;
+  padding: 3rem 0;
   box-shadow: 0 3rem 6rem rgba(black, .1);
   background-color: rgba(white, .6);
 
   font-size: $default-font-size;
 
-  transform: skewX(-6deg);
+  //transform: skewX(-6deg);
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
+  position: relative;
 
   .leftPart {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding-right: 2rem;
-    transform: skewX(6deg);
-    @include respond(phone) {
-      transform:  skewX(0);
-    }
-  }
+    //transform: skewX(6deg);
+    position: absolute;
+    left: -2.5rem;
+    top: -2.5rem;
+    transition: all .5s;
 
-
-  @include respond(phone) {
-    transform: skewX(0);
   }
 
   &__shape {
     width: 15rem;
     height: 15rem;
-
-    position: relative;
     overflow: hidden;
-    border-radius: 50%;
+    //border-radius: 50%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    transition: all .5s;
+    justify-content: flex-start;
+    align-items: flex-start;
+    transition: all 1s;
 
+    //margin-top: -2rem;
 
   }
 
   &__img {
-    height: 100%;
-
-    transform: scale(1);
+    height: 40%;
+    border-radius: 50%;
     backface-visibility: hidden;
-    transition: all .5s;
+    transition: all 1s;
   }
 
   &__text {
-    width: 80%;
-    transform: skewX(6deg);
-    @include respond(phone) {
-      transform: skewX(0);
-    }
+    width: 90%;
+    z-index: 99;
+    transition: all 0.4s;
+    font-size: 1.4rem;
+
   }
 
   &__caption {
@@ -88,15 +79,31 @@
     opacity: 0;
   }
 
+  &:hover &__shape {
+    width: 15rem;
+    height: 15rem;
+    margin-top: 0;
+  }
+
+
   &:hover &__caption {
     opacity: 1;
     transform: scale(1) translateY(0);
-
   }
 
   &:hover &__img {
-    transform:  scale(1.1);
+    height: 100%;
+  }
 
+  &:hover &__text {
+    padding-left: 17rem;
+    font-size: 1.3rem;
+  }
+
+  &:hover .leftPart {
+    left: 2rem;
+    top: calc(50% - 8rem);
+    opacity: 0.9;
   }
 
 }

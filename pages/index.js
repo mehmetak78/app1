@@ -5,9 +5,9 @@ import About from "../components/sections/About";
 import Features from "../components/sections/Features";
 import Rooms from "../components/sections/Rooms";
 
-import Stories from "../components/sections/Stories";
-import Stories3 from "../components/sections/Stories3";
 
+import Stories from "../components/sections/Stories";
+//import Stories2 from "../components/sections/Stories2";
 
 import Footer from "../components/Footer";
 
@@ -65,7 +65,7 @@ const Home = (props) => {
             <Features sectionRef={featuresSectionRef}/>
             <Rooms sectionRef={roomsSectionRef}/>
             <Stories sectionRef={storiesSectionRef}/>
-            <Stories3 sectionRef={storiesSectionRef}/>
+
             <Booking sectionRef={bookingSectionRef}/>
 
             <div className={styles.section}>

@@ -5,7 +5,7 @@ import Button from "../UI/Button";
 const Stories = (props) => {
   return (
     <section ref={props.sectionRef} className={styles.sectionStories}>
-      <div className="u-center-text u-margin-bottom-small">
+      <div className="u-center-text u-margin-bottom-big">
         <h2 className="heading-secondary">
           Guest Stories
         </h2>
@@ -16,7 +16,6 @@ const Stories = (props) => {
           <div className={styles.leftPart}>
             <figure className={styles["story__shape"]}>
               <img src="imgHS/guest3.jpg" alt="Guest" className={styles["story__img"]}/>
-
             </figure>
             <figcaption className={styles["story__caption"]}>Mrs. Brown</figcaption>
           </div>
