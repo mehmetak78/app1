@@ -26,15 +26,15 @@
 
   &__leftPart {
     position: absolute;
-    left: -2.5rem;
-    top: -2.5rem;
+    left: -1.5rem;
+    top: -1.5rem;
     transition: all .5s;
   }
 
   &__img {
     overflow: hidden;
-    width: 5rem;
-    height: 5rem;
+    width: 7rem;
+    height: 7rem;
     border-radius: 50%;
     backface-visibility: hidden;
     transition: all 1s;
@@ -52,11 +52,6 @@
     transition: all 0.4s;
     font-size: 1.4rem;
 
-  }
-
-  &:hover &__shape {
-    width: 15rem;
-    height: 15rem;
   }
 
 

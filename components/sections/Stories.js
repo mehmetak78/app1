@@ -13,8 +13,8 @@ const Stories = (props) => {
 
             <div className={styles.storiesContent}>
                 <div className={styles['story']}>
-                    <div className={styles.['story__leftPart']}>
-                        <img src="imgHS/guest3.jpg" alt="Guest" className={styles["story__img"]}/>
+                    <div className={styles['story__leftPart']}>
+                        <img src="imgHS/guest1.jpg" alt="Guest" className={styles["story__img"]}/>
                         <figcaption className={styles["story__caption"]}>Mrs. Brown</figcaption>
                     </div>
 
@@ -33,8 +33,8 @@ const Stories = (props) => {
 
 
                 <div className={styles.story}>
-                    <div className={styles.['story__leftPart']}>
-                        <img src="imgHS/guest4.jpg" alt="Guest" className={styles["story__img"]}/>
+                    <div className={styles['story__leftPart']}>
+                        <img src="imgHS/guest2.jpg" alt="Guest" className={styles["story__img"]}/>
                         <figcaption className={styles["story__caption"]}>Mr. White</figcaption>
                     </div>
                     <div className={styles["story__text"]}>
