@@ -1,0 +1,13 @@
+@import '../../styles/abstracts/_variables.scss';
+@import '../../styles/abstracts/_mixins.scss';
+
+.sectionBooking {
+    padding: 5rem 0;
+    background-color: $color-background-booking-section;
+    position: relative;
+    z-index: 10;
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 10vw), 0 100%);
+    margin-bottom: -10vw;
+
+    height: 100vh;
+}

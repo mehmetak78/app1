@@ -4,15 +4,16 @@ import HeaderContent from "../components/sections/HeaderContent";
 import About from "../components/sections/About";
 import Features from "../components/sections/Features";
 import Rooms from "../components/sections/Rooms";
-
-
 import Stories from "../components/sections/Stories";
-//import Stories2 from "../components/sections/Stories2";
+
+import Booking from "../components/sections/Booking";
+//import Booking from "../componentSamples/Booking";
+
 
 import Footer from "../components/Footer";
 
 
-import Booking from "../componentSamples/Booking";
+
 
 import {useRouter} from "next/router";
 
