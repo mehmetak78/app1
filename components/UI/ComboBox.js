@@ -92,7 +92,7 @@ const Combobox = (props) => {
 
   const cbItems = (
     items.map(item=> {
-      return <div className={styles["combo-item"]} id={item.id} onClick={comboItemClicked}>{item.id}</div>
+      return <div className={styles["combo-item"]} key={item.id} id={item.id} onClick={comboItemClicked}>{item.id}</div>
     })
   )
 
