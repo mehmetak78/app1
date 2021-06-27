@@ -4,20 +4,34 @@ import HeaderContent from "../components/sections/HeaderContent";
 import About from "../components/sections/About";
 import Features from "../components/sections/Features";
 import Rooms from "../components/sections/Rooms";
-
-
 import Stories from "../components/sections/Stories";
-//import Stories2 from "../components/sections/Stories2";
+
+import Booking2 from "../componentSamples/Booking";
+import Booking from "../components/sections/Booking";
+
 
 import Footer from "../components/Footer";
 
 
-import Booking from "../componentSamples/Booking";
 
 import {useRouter} from "next/router";
+import {closeAllComboItems} from "../components/UI/ComboBox";
+
+import stylesComboBox from "../components/UI/ComboBox.module.scss";
 
 
 const Home = (props) => {
+
+    useEffect(() => {
+        window.onclick = function(event) {
+            //console.log("App.window.onClick()");
+            if (!event.target.classList.contains(stylesComboBox["combo-input"])) {
+                closeAllComboItems();
+            }
+        }
+
+    }, []);
+
 
     const {
         aboutSectionRef,
@@ -28,6 +42,8 @@ const Home = (props) => {
         blogSectionRef,
         footerSectionRef
     } = props;
+
+
 
     const router = useRouter();
 
@@ -65,14 +81,9 @@ const Home = (props) => {
             <Features sectionRef={featuresSectionRef}/>
             <Rooms sectionRef={roomsSectionRef}/>
             <Stories sectionRef={storiesSectionRef}/>
-
             <Booking sectionRef={bookingSectionRef}/>
 
             <div className={styles.section}>
-                <section className={styles['section-two']}>
-                    <h1>About</h1>
-                    <img className={styles.image} src="https://unsplash.it/300/500" alt=""/>
-                </section>
                 <section ref={blogSectionRef} className={styles['section-three']}>
                     <h1>Blog</h1>
                 </section>

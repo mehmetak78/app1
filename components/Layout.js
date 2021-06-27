@@ -112,28 +112,6 @@ const Layout = (props) => {
         setIsModalOpen(true);
     }
 
-/*
-    const childrenWithProps = React.Children.map(props.children, child => {
-        if (React.isValidElement(child)) {
-            if (child.type.name === 'Home') {
-                console.log('React.cloneElement')
-                return React.cloneElement(child, {
-                    homeSectionRef: homeSectionRef,
-                    aboutSectionRef: aboutSectionRef,
-                    featuresSectionRef: featuresSectionRef,
-                    roomsSectionRef: roomsSectionRef,
-                    storiesSectionRef: storiesSectionRef,
-                    bookingSectionRef: bookingSectionRef,
-                    blogSectionRef: blogSectionRef,
-                    footerSectionRef: footerSectionRef,
-                });
-            }
-        }
-
-        return child;
-    });
-*/
-
 
     return (
         <div>
@@ -143,7 +121,6 @@ const Layout = (props) => {
                     isScrolled={y > 50}
                 />
             </div>
-            {/*{childrenWithProps}*/}
             {path === '/'
                 ? <Home
                     homeSectionRef={homeSectionRef}

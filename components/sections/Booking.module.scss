@@ -1,0 +1,85 @@
+@import '../../styles/abstracts/_variables.scss';
+@import '../../styles/abstracts/_mixins.scss';
+
+.sectionBooking {
+
+  padding: 5rem 0;
+  background-image: linear-gradient(to right bottom, $color-background-booking-section1, $color-background-booking-section2);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+
+
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .form {
+      color: $color--booking-form-text;
+      padding: 4rem 10rem 4rem 10rem ;
+      transition: all 1s ease-out;
+    }
+
+    .image {
+      clip-path: circle();
+      transition: all 1s ease-out;
+    }
+
+    &:hover .image{
+      opacity: 0.6;
+      transform: translateX(-9rem);
+    }
+
+    &:hover .form{
+      transform: translateX(9rem);
+    }
+
+    @include respond(tab-land) {
+      .image {
+        width: 50%;
+      }
+    }
+
+    @include respond(tab-port) {
+      .image {
+        width: 55%;
+      }
+      .form {
+        padding: 4rem 4rem 4rem 4rem ;
+      }
+      &:hover .image{
+        opacity: 0.6;
+        transform: translateX(-4rem);
+      }
+      &:hover .form{
+        transform: translateX(4rem);
+      }
+    }
+
+    @include respond(phone) {
+      .image {
+        display:none;
+      }
+      &:hover .form{
+        transform: translateX(0);
+      }
+    }
+
+
+  }
+
+  .btnBooking {
+    display: inline;
+    margin: 0 1rem;
+    background: $color-background-booking-button;
+    color: $color-header-links;
+    font-size: 1.4rem;
+    letter-spacing: 1.2px;
+  }
+
+}

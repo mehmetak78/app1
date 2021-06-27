@@ -1,0 +1,133 @@
+@import '../../styles/abstracts/_variables.scss';
+@import '../../styles/abstracts/_mixins.scss';
+
+.combo-input
+{
+  color: $color-text-primary;
+  background: $color-input-background;
+  padding: 0.4rem;
+  font-size: 1rem;
+  border:1px solid $color-input-border;
+  border-radius: 0.2rem;
+  transition: all 0.30s ease-in-out;
+  outline: none;
+  &:hover {
+    border: 1px solid $color-input-hover;
+  }
+  &:focus {
+    box-shadow: 0 0 12px $color-input-hover;
+    border: 1px solid $color-input-hover;
+  }
+}
+
+.combobox {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  margin: 0.5rem 0;
+  padding: 0;
+  height: 100%;
+  position: relative;
+
+  label {
+    text-align: right;
+    padding-right: 0.2rem;
+  }
+
+  input, textarea, .checkbox-item {
+    flex-shrink: 1;
+    width: 100%;
+
+    &:required {
+      ~ label {
+        padding-right: 1.2rem;
+
+        &::after {
+          position: absolute;
+          font-size: 0.7rem;
+          content: "(*)"
+        }
+
+        color: $color-text-required;
+      }
+    }
+  }
+
+  textarea {
+    height: calc(100%);
+    resize: none;
+  }
+
+  .required {
+    ~ label {
+      padding-right: 1.2rem;
+
+      &::after {
+        position: absolute;
+        font-size: 0.7rem;
+        content: "(*)"
+      }
+
+      color: $color-text-required;
+    }
+  }
+
+  .combo-input {
+    position: relative;
+    cursor: pointer;
+    width: 100%;
+    padding: 0.5rem;
+    margin: 0;
+
+    &::after {
+      content: "...";
+      position: absolute;
+      right: 0.5rem;
+      line-height: 0.8rem;
+    }
+
+    .combo-items {
+      transition: transform 400ms ease-in-out;
+      transform-origin: top;
+      background: $color-input-background;
+      border: solid 1px $color-input-border;
+      margin: 0;
+      padding: 0;
+      position: absolute;
+      top: calc(100%);
+      left: 0;
+      width: 100%;
+      z-index: 999;
+      transform: scale(1, 0);
+
+      &:hover {
+        border: solid 1px $color-input-hover;
+      }
+
+      .combo-item {
+        padding: 0.4rem;
+
+        &:hover {
+          background: $color-input-hover;
+        }
+      }
+
+      .combo-item-selected {
+        background: $color-input-selected;
+        position: relative;
+
+        &::after {
+          content: "\221A";
+          position: absolute;
+          right: 1rem;
+        }
+      }
+    }
+
+    .combo-items-active {
+      transform: scale(1, 1);
+      box-shadow: 0 0 12px $color-input-hover;
+      border: 1px solid $color-input-hover;
+    }
+  }
+}
