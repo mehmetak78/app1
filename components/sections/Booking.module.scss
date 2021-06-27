@@ -11,9 +11,6 @@
   align-items: center;
   justify-content: center;
 
-
-
-
   .container {
     display: flex;
     align-items: center;
@@ -73,13 +70,17 @@
 
   }
 
-  .btnBooking {
-    display: inline;
-    margin: 0 1rem;
-    background: $color-background-booking-button;
-    color: $color-header-links;
-    font-size: 1.4rem;
-    letter-spacing: 1.2px;
+  .form-actions {
+    margin-top: 2rem;
+    .btnBooking {
+      display: inline;
+      margin: 0 1rem;
+      background: $color-background-booking-button;
+      color: $color-header-links;
+      font-size: 1.4rem;
+      letter-spacing: 1.2px;
+    }
   }
+
 
 }

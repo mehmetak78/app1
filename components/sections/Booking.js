@@ -33,38 +33,36 @@ const Booking = (props) => {
       </div>
       <div className={styles.container}>
         <Form onSubmit={submitHandler} className={styles.form}>
-{/*          <Card className={styles.card}>*/}
-            <div>
-              <Input inputHook={username}/>
-              <Input inputHook={password}/>
-              <Combobox
-                label="Rooms"
-                id="cb1"
-                name="cb1"
-                type="text"
-                autoComplete="surname"
-                required
-                /*multi*/
-                hasBlank
-                selectedItems={combo1SelectedItems}
-                items ={
-                  [
-                    {id: "1"},
-                    {id: "2"},
-                    {id: "3"},
-                  ]
-                }
-              />
-            </div>
-            <div className={styles["form-actions"]}>
-              <Button
-                buttontype='btn1'
-                className={styles.btnBooking}
-              > Book now
-              </Button>
-            </div>
-            {isLoading && <LoadingSpinner/>}
-{/*          </Card>*/}
+          <div>
+            <Input inputHook={username}/>
+            <Input inputHook={password}/>
+            <Combobox
+              label="Rooms"
+              id="cb1"
+              name="cb1"
+              type="text"
+              autoComplete="rooms"
+              required
+              /*multi*/
+              hasBlank
+              selectedItems={combo1SelectedItems}
+              items={
+                [
+                  {id: "1"},
+                  {id: "2"},
+                  {id: "3"},
+                ]
+              }
+            />
+          </div>
+          <div className={styles["form-actions"]}>
+            <Button
+              buttontype='btn1'
+              className={styles.btnBooking}
+            > Book now
+            </Button>
+          </div>
+          {isLoading && <LoadingSpinner/>}
         </Form>
         <img className={styles.image} src="/imgHS/hs2.jpg" alt="Hotel Silvanus"/>
       </div>
